@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Щит автоматика / управления, разработка, монтаж, наладка. КИПиА,
+      автоматизация котельных.
+    </title>
+    <meta
+      name="description"
+      content="Разработка, монтаж, наладка щитов автоматики и автоматизация котельных. КИПиА, сервис, гарантия."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="page">
+    <div class="page__wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="header__container container">
+          <!-- Мобильное меню -->
+          <button
+            class="header__menu-toggle"
+            type="button"
+            aria-label="Открыть меню"
+          >
+            <span class="header__menu-text">Меню</span>
+          </button>
+
+          <!-- Левая навигация -->
+          <nav class="header__nav header__nav--left">
+            <div class="catalog">
+              <button class="catalog__button" type="button">
+                <span class="catalog__icon"></span>
+                <span class="catalog__text">Меню</span>
+              </button>
+
+              <div class="catalog__menu">
+                <ul class="catalog__list">
+                  <li class="catalog__item">
+                    <a href="/avtomatizatsiya/" class="catalog__link"
+                      >Автоматизация котельных. Разработка, монтаж, наладка,
+                      сервис</a
+                    >
+                  </li>
+                  <li class="catalog__item">
+                    <a href="/shhity-avtomatiki/" class="catalog__link"
+                      >Щиты автоматики. Разработка, монтаж, наладка, сервис</a
+                    >
+                  </li>
+                  <li class="catalog__item">
+                    <a href="/shop/" class="catalog__link"
+                      >Щиты автоматики. Каталог</a
+                    >
+                  </li>
+                  <li class="catalog__item">
+                    <a href="/portfolio/" class="catalog__link">Наши работы</a>
+                  </li>
+                  <li class="catalog__item">
+                    <a href="/sertifikaty-i-razresheniya/" class="catalog__link"
+                      >Документация</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Логотип -->
+          <a href="/" class="header__logo">
+            <img
+              src="./images/main-logo-min.png"
+              alt="ТехноИмпериум"
+              class="header__logo-img"
+            />
+          </a>
+
+          <!-- Правая навигация -->
+          <nav class="header__nav header__nav--right">
+            <div class="header__contacts">
+              <a
+                href="mailto:secretariat@technoimperium.ru"
+                class="header__contact header__contact--email"
+              >
+                secretariat@technoimperium.ru
+              </a>
+              <a
+                href="tel:+79872156000"
+                class="header__contact header__contact--phone"
+              >
+                8 (987) 215 6000
+              </a>
+            </div>
+
+            <div class="header__links">
+              <a href="/contact-us/" class="header__link">Контакты</a>
+            </div>
+
+            <!-- Поиск -->
+            <div class="search">
+              <button
+                class="search__toggle"
+                type="button"
+                aria-label="Открыть поиск"
+              >
+                <svg
+                  class="search__icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="6.2" cy="6.2" r="5.1" />
+                  <line x1="10.9" y1="10.9" x2="15.5" y2="15.5" />
+                </svg>
+              </button>
+
+              <form class="search__form" action="/search/">
+                <input
+                  type="text"
+                  class="search__input"
+                  placeholder="Поиск..."
+                  name="s"
+                />
+                <button type="submit" class="search__submit">
+                  <svg
+                    class="search__icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle cx="6.2" cy="6.2" r="5.1" />
+                    <line x1="10.9" y1="10.9" x2="15.5" y2="15.5" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="search__close"
+                  aria-label="Закрыть поиск"
+                ></button>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Баннеры -->
+        <section class="banners">
+          <div class="banners__container container">
+            <div class="banners__grid">
+              <!-- Баннер 1 -->
+              <div class="banners__item banners__item--small">
+                <a
+                  href="/product-category/shiti-avtomatizacii-kotelnih/"
+                  class="banner"
+                >
+                  <div
+                    class="banner__image"
+                    style="background-image: url(./images/electro66.jpg)"
+                  ></div>
+                  <div class="banner__content">
+                    <h3 class="banner__title">Щиты автоматизации котельных</h3>
+                    <span class="banner__link">Подробнее</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Баннер 2 -->
+              <div class="banners__item banners__item--large">
+                <a
+                  href="/product-category/vosstanovlenie-i-remont-shhitov-avtomatizatsii/"
+                  class="banner"
+                >
+                  <div
+                    class="banner__image"
+                    style="background-image: url(./images/sdv43.png)"
+                  ></div>
+                  <div class="banner__content">
+                    <h3 class="banner__title">
+                      Восстановление и ремонт щитов автоматизации
+                    </h3>
+                    <span class="banner__link">Подробнее</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Инфо текст -->
+            <div class="banners__info">
+              <p class="banners__info-text">Соблюдение сроков</p>
+              <p class="banners__info-text">По договору и с гарантией</p>
+            </div>
+
+            <div class="banners__grid">
+              <!-- Баннер 3 -->
+              <div class="banners__item banners__item--large">
+                <a
+                  href="/product-category/shiti-avtomatizacii-kotelnih/"
+                  class="banner"
+                >
+                  <div
+                    class="banner__image"
+                    style="background-image: url(./images/dfgeewr.jpg)"
+                  ></div>
+                  <div class="banner__content">
+                    <h3 class="banner__title">АВТОМАТИЗАЦИЯ КОТЕЛЬНЫХ</h3>
+                    <span class="banner__link">Подробнее</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Баннер 4 -->
+              <div class="banners__item banners__item--small">
+                <a
+                  href="/product-category/shiti-avtomatizacii-kotelnih/"
+                  class="banner"
+                >
+                  <div
+                    class="banner__image"
+                    style="background-image: url(./images/dfsadf.jpg)"
+                  ></div>
+                  <div class="banner__content">
+                    <h3 class="banner__title">
+                      РАЗРАБОТКА, МОНТАЖ, НАЛАДКА, СЕРВИС
+                    </h3>
+                    <span class="banner__link">Подробнее</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Инфо текст 2 -->
+            <div class="banners__info banners__info--center">
+              <p class="banners__info-text">Под любую задачу</p>
+            </div>
+
+            <div class="banners__grid banners__grid--three">
+              <!-- Баннер 5 -->
+              <div class="banners__item">
+                <a
+                  href="/product-category/shhity-avtomatizatsii-itp/"
+                  class="banner"
+                >
+                  <div
+                    class="banner__image"
+                    style="background-image: url(./images/2.jpg)"
+                  ></div>
+                  <div class="banner__content">
+                    <h3 class="banner__title">
+                      Щиты автоматизации / В сжатые сроки
+                    </h3>
+                    <span class="banner__link">Подробнее</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Баннер 6 -->
+              <div class="banners__item">
+                <a
+                  href="/product-category/shhity-avtomatizatsii-sistem-ventilyatsii-i-konditsionirovaniya/"
+                  class="banner"
+                >
+                  <div
+                    class="banner__image"
+                    style="background-image: url(./images/Snimok-ekrana-2020-11-25-v-15.47.27.jpg)"
+                  ></div>
+                  <div class="banner__content">
+                    <h3 class="banner__title">Решаем задачи любой сложности</h3>
+                    <span class="banner__link">Подробнее</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Баннер 7 -->
+              <div class="banners__item">
+                <a href="/product-category/komplekty-shhitov/" class="banner">
+                  <div
+                    class="banner__image"
+                    style="background-image: url(./images/dsc_0779.jpg)"
+                  ></div>
+                  <div class="banner__content">
+                    <h3 class="banner__title">Готовые решения в наличии</h3>
+                    <span class="banner__link">Подробнее</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEO блок -->
+        <section class="seo-block">
+          <div class="seo-block__container container">
+            <h1 class="seo-block__title">Группа компаний «ТехноИмпериум»</h1>
+            <div class="seo-block__content">
+              <p>
+                Группа компаний "ТехноИмпериум" основана в 2016 году. В состав
+                ГК входят:
+              </p>
+              <p>
+                ИП Кузнецов Олег Вячеславович – работы по проектированию,
+                монтажу, пусконаладке и техническому обслуживанию и эксплуатации
+                котельных любой мощности и на любом виде топлива с оборудованием
+                любых производителей. Производим работы по проектированию и
+                разработке, монтажу, пусконаладке и эксплуатации систем
+                автоматизации ИТП, приточно-вытяжных систем,
+                покрасочно-сушильных камер, КНС и КОС, овощехранилищ и теплиц,
+                насосных станций, АСУ ТП. Разработка/модернизация, монтаж и
+                отладка АСУ ТП.
+              </p>
+              <p>
+                ООО "Щит-Автоматика" – разработка и производство силовых щитов
+                (ВРУ, АВР, ЩР и т. д. и т. п.) и щитов автоматизации для
+                широкого спектра применения (котлы и котельные на любых видах
+                топлива, индивидуальные тепловые пункты (ИТП), приточно-вытяжные
+                системы, покрасочно-сушильные камеры, канализационно-насосные
+                станции (КНС) и канализационно-очистные станции (КОС),
+                овощехранилища и теплицы, насосы и насосные установки/станции,
+                грузоподъёмное оборудование (лебёдки, кран-балки и т. д. и т.
+                п.), производственные и перерабатывающие станки и установки, АСУ
+                ТП. Разработка/модернизация, монтаж, отладка и техническое
+                обслуживание систем автоматизации и АСУ ТП.
+              </p>
+              <p>
+                ООО "Монтаж-Автоматика" – монтажные, пусконаладочные и сервисные
+                работы с оформлением необходимой исполнительно-технической
+                документацией и сдачей в контролирующие органы. Котельные на
+                любых видах топлива. Системы отопления. Системы водоснабжения и
+                водоотведения (канализации). Системы вентиляции и
+                кондиционирования. Системы газоснабжения. Системы автоматизации.
+                Общестроительные работы.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Контакты в подвале страницы -->
+        <section class="page-contacts">
+          <div class="page-contacts__container container">
+            <div class="page-contacts__content">
+              <p>
+                Наш адрес: Россия, РТ, г. Казань, ул. Восход д. 49. Большая
+                парковка для автомобилей.
+              </p>
+              <p>
+                Бесплатный выезд специалиста. Звоните сейчас
+                <a href="tel:+79872156000" class="page-contacts__phone"
+                  >8 (987) 215 6000</a
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__grid">
+            <!-- Колонка 1 -->
+            <div class="footer__col">
+              <div class="footer__section">
+                <h3 class="footer__title">О нас</h3>
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="/kak-zakazat/" class="footer__link"
+                      >Как заказать</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a href="/dostavka-i-oplata/" class="footer__link"
+                      >Доставка и оплата</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a href="/contact-us/" class="footer__link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Колонка 2 -->
+            <div class="footer__col">
+              <div class="footer__section">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="/shop/" class="footer__link"
+                      >Щиты автоматики. Каталог</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a href="/portfolio/" class="footer__link">Наши работы</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="/sertifikaty-i-razresheniya/" class="footer__link"
+                      >Документация</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Колонка 3 -->
+            <div class="footer__col">
+              <div class="footer__section">
+                <h3 class="footer__title">Наши направления</h3>
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="/avtomatizatsiya/" class="footer__link"
+                      >Автоматизация котельных. Разработка, монтаж, наладка,
+                      сервис</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a href="/shhity-avtomatiki/" class="footer__link"
+                      >Щиты автоматики. Разработка, монтаж, наладка, сервис</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Центральная колонка -->
+            <div class="footer__col footer__col--center">
+              <div class="footer__center">
+                <a href="/" class="footer__logo">
+                  <img
+                    src="./images/main-logo-min.png"
+                    alt="ТехноИмпериум"
+                    class="footer__logo-img"
+                  />
+                </a>
+                <button class="footer__callback button" data-modal="callback">
+                  Обратный звонок
+                </button>
+              </div>
+            </div>
+
+            <!-- Колонка контактов -->
+            <div class="footer__col">
+              <div class="footer__section">
+                <ul class="footer__contacts">
+                  <li class="footer__contact-item">
+                    <p class="footer__contact-text">
+                      Россия, РТ, г. Казань, ул. Восход 49
+                    </p>
+                  </li>
+                  <li class="footer__contact-item">
+                    <p class="footer__contact-text">
+                      Режим работы: с 9:00 до 18:00
+                    </p>
+                  </li>
+                  <li class="footer__contact-item">
+                    <a href="tel:+79872156000" class="footer__contact-link"
+                      >8 (987) 215 6000</a
+                    >
+                  </li>
+                  <li class="footer__contact-item">
+                    <a
+                      href="mailto:secretariat@technoimperium.ru"
+                      class="footer__contact-link"
+                      >secretariat@technoimperium.ru</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+                  <!-- Нижняя часть футера -->
+          <div class="footer__bottom">
+            <div class="footer__social">
+              <ul class="social">
+                <li class="social__item">
+                  <a
+                    href="https://t.me/TechnoImperium"
+                    target="_blank"
+                    rel="noopener"
+                    class="social__link"
+                  >
+                    Мы в TELEGRAM <span class="social__icon">→</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    href="https://vk.com/tehno_imperium"
+                    target="_blank"
+                    rel="noopener"
+                    class="social__link"
+                  >
+                    Мы Вконтакте <span class="social__icon">→</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__copyright">
+              <p>«ТехноИмпериум» &copy; Казань 2020</p>
+            </div>
+          </div>
+      </footer>
+    </div>
+
+    <!-- Модальное окно обратного звонка -->
+    <div class="modal" id="callback">
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <div class="modal__content">
+          <button class="modal__close" aria-label="Закрыть окно">×</button>
+
+          <div class="callback-form">
+            <h3 class="callback-form__title">Заказать обратный звонок</h3>
+            <p class="callback-form__description">
+              Введите номер телефона и мы Вам перезвоним в ближайшее время
+            </p>
+
+            <form class="callback-form__form">
+              <div class="callback-form__field">
+                <label class="callback-form__label"
+                  >Телефон<span>*</span></label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  class="callback-form__input"
+                  required
+                  placeholder="+7 (___) ___-__-__"
+                />
+              </div>
+
+              <button type="submit" class="callback-form__button button">
+                Жду звонка
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
