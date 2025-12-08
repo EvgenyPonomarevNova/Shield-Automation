@@ -1,0 +1,124 @@
+<!-- Header Component -->
+<header class="header">
+  <div class="header__container container">
+    <!-- Мобильное меню -->
+    <button
+      class="header__menu-toggle"
+      type="button"
+      aria-label="Открыть меню"
+    >
+      <span class="header__menu-text">Меню</span>
+    </button>
+
+    <!-- Левая навигация -->
+    <nav class="header__nav header__nav--left">
+      <div class="catalog">
+        <button class="catalog__button" type="button">
+          <span class="catalog__icon"></span>
+          <span class="catalog__text">Меню</span>
+        </button>
+
+        <div class="catalog__menu">
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="/avtomatizatsiya/" class="catalog__link"
+                >Автоматизация котельных. Разработка, монтаж, наладка, сервис</a
+              >
+            </li>
+            <li class="catalog__item">
+              <a href="/shhity-avtomatiki/" class="catalog__link"
+                >Щиты автоматики. Разработка, монтаж, наладка, сервис</a
+              >
+            </li>
+            <li class="catalog__item">
+              <a href="/shop/" class="catalog__link">Щиты автоматики. Каталог</a>
+            </li>
+            <li class="catalog__item">
+              <a href="/portfolio/" class="catalog__link">Наши работы</a>
+            </li>
+            <li class="catalog__item">
+              <a href="/sertifikaty-i-razresheniya/" class="catalog__link"
+                >Документация</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Логотип -->
+    <a href="/" class="header__logo">
+      <img
+        src="./images/main-logo-min.png"
+        alt="ТехноИмпериум"
+        class="header__logo-img"
+      />
+    </a>
+
+    <!-- Правая навигация -->
+    <nav class="header__nav header__nav--right">
+      <div class="header__contacts">
+        <a
+          href="mailto:secretariat@technoimperium.ru"
+          class="header__contact header__contact--email"
+        >
+          secretariat@technoimperium.ru
+        </a>
+        <a
+          href="tel:+79872156000"
+          class="header__contact header__contact--phone"
+        >
+          8 (987) 215 6000
+        </a>
+      </div>
+
+      <div class="header__links">
+        <a href="/contact-us/" class="header__link">Контакты</a>
+      </div>
+
+      <!-- Поиск -->
+      <div class="search">
+        <button
+          class="search__toggle"
+          type="button"
+          aria-label="Открыть поиск"
+        >
+          <svg
+            class="search__icon"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+          >
+            <circle cx="6.2" cy="6.2" r="5.1" />
+            <line x1="10.9" y1="10.9" x2="15.5" y2="15.5" />
+          </svg>
+        </button>
+
+        <form class="search__form" action="/search/">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Поиск..."
+            name="s"
+          />
+          <button type="submit" class="search__submit">
+            <svg
+              class="search__icon"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+            >
+              <circle cx="6.2" cy="6.2" r="5.1" />
+              <line x1="10.9" y1="10.9" x2="15.5" y2="15.5" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="search__close"
+            aria-label="Закрыть поиск"
+          ></button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>

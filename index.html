@@ -18,148 +18,71 @@
 
     <!-- Основные стили -->
     <link rel="stylesheet" href="./css/style.css" />
+    
+    <!-- Стили для загрузчика компонентов -->
+    <style>
+      /* Стили для индикатора загрузки */
+      .components-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Скрываем контент до загрузки компонентов */
+      .main-content {
+        display: none;
+      }
+      
+      .components-loaded .main-content {
+        display: block;
+      }
+      
+      /* Убираем индикатор загрузки после загрузки компонентов */
+      .components-loaded .components-loading {
+        display: none;
+      }
+    </style>
   </head>
 
   <body class="page">
-    <div class="page__wrapper">
-      <!-- Header -->
-      <header class="header">
-        <div class="header__container container">
-          <!-- Мобильное меню -->
-          <button
-            class="header__menu-toggle"
-            type="button"
-            aria-label="Открыть меню"
-          >
-            <span class="header__menu-text">Меню</span>
-          </button>
-
-          <!-- Левая навигация -->
-          <nav class="header__nav header__nav--left">
-            <div class="catalog">
-              <button class="catalog__button" type="button">
-                <span class="catalog__icon"></span>
-                <span class="catalog__text">Меню</span>
-              </button>
-
-              <div class="catalog__menu">
-                <ul class="catalog__list">
-                  <li class="catalog__item">
-                    <a href="/avtomatizatsiya/" class="catalog__link"
-                      >Автоматизация котельных. Разработка, монтаж, наладка,
-                      сервис</a
-                    >
-                  </li>
-                  <li class="catalog__item">
-                    <a href="/shhity-avtomatiki/" class="catalog__link"
-                      >Щиты автоматики. Разработка, монтаж, наладка, сервис</a
-                    >
-                  </li>
-                  <li class="catalog__item">
-                    <a href="/shop/" class="catalog__link"
-                      >Щиты автоматики. Каталог</a
-                    >
-                  </li>
-                  <li class="catalog__item">
-                    <a href="/portfolio/" class="catalog__link">Наши работы</a>
-                  </li>
-                  <li class="catalog__item">
-                    <a href="/sertifikaty-i-razresheniya/" class="catalog__link"
-                      >Документация</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-          <!-- Логотип -->
-          <a href="/" class="header__logo">
-            <img
-              src="./images/main-logo-min.png"
-              alt="ТехноИмпериум"
-              class="header__logo-img"
-            />
-          </a>
-
-          <!-- Правая навигация -->
-          <nav class="header__nav header__nav--right">
-            <div class="header__contacts">
-              <a
-                href="mailto:secretariat@technoimperium.ru"
-                class="header__contact header__contact--email"
-              >
-                secretariat@technoimperium.ru
-              </a>
-              <a
-                href="tel:+79872156000"
-                class="header__contact header__contact--phone"
-              >
-                8 (987) 215 6000
-              </a>
-            </div>
-
-            <div class="header__links">
-              <a href="/contact-us/" class="header__link">Контакты</a>
-            </div>
-
-            <!-- Поиск -->
-            <div class="search">
-              <button
-                class="search__toggle"
-                type="button"
-                aria-label="Открыть поиск"
-              >
-                <svg
-                  class="search__icon"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                >
-                  <circle cx="6.2" cy="6.2" r="5.1" />
-                  <line x1="10.9" y1="10.9" x2="15.5" y2="15.5" />
-                </svg>
-              </button>
-
-              <form class="search__form" action="/search/">
-                <input
-                  type="text"
-                  class="search__input"
-                  placeholder="Поиск..."
-                  name="s"
-                />
-                <button type="submit" class="search__submit">
-                  <svg
-                    class="search__icon"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                  >
-                    <circle cx="6.2" cy="6.2" r="5.1" />
-                    <line x1="10.9" y1="10.9" x2="15.5" y2="15.5" />
-                  </svg>
-                </button>
-                <button
-                  type="button"
-                  class="search__close"
-                  aria-label="Закрыть поиск"
-                ></button>
-              </form>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-      <!-- Main Content -->
+    <!-- Индикатор загрузки компонентов -->
+    <div class="components-loading">
+      <div class="loading-spinner"></div>
+      <p>Загрузка сайта...</p>
+    </div>
+    
+    <!-- Основной контейнер для динамической загрузки компонентов -->
+    <div class="page__wrapper main-content">
+      <!-- Шапка будет вставлена здесь автоматически -->
+      
+      <!-- Основной контент -->
       <main class="main">
         <!-- Баннеры -->
         <section class="banners">
           <div class="banners__container container">
             <div class="banners__grid">
-              <!-- Баннер 1 -->
+              <!-- Баннер 1: Котельные -->
               <div class="banners__item banners__item--small">
                 <a
-                  href="/product-category/shiti-avtomatizacii-kotelnih/"
+                  href="./catalog.html#kotelnye"
                   class="banner"
                 >
                   <div
@@ -173,10 +96,10 @@
                 </a>
               </div>
 
-              <!-- Баннер 2 -->
+              <!-- Баннер 2: Восстановление -->
               <div class="banners__item banners__item--large">
                 <a
-                  href="/product-category/vosstanovlenie-i-remont-shhitov-avtomatizatsii/"
+                  href="./catalog.html#vosstanovlenie"
                   class="banner"
                 >
                   <div
@@ -200,10 +123,10 @@
             </div>
 
             <div class="banners__grid">
-              <!-- Баннер 3 -->
+              <!-- Баннер 3: Автоматизация котельных -->
               <div class="banners__item banners__item--large">
                 <a
-                  href="/product-category/shiti-avtomatizacii-kotelnih/"
+                  href="./catalog.html#kotelnye"
                   class="banner"
                 >
                   <div
@@ -217,10 +140,10 @@
                 </a>
               </div>
 
-              <!-- Баннер 4 -->
+              <!-- Баннер 4: Разработка, монтаж -->
               <div class="banners__item banners__item--small">
                 <a
-                  href="/product-category/shiti-avtomatizacii-kotelnih/"
+                  href="./catalog.html#kotelnye"
                   class="banner"
                 >
                   <div
@@ -243,10 +166,10 @@
             </div>
 
             <div class="banners__grid banners__grid--three">
-              <!-- Баннер 5 -->
+              <!-- Баннер 5: ИТП -->
               <div class="banners__item">
                 <a
-                  href="/product-category/shhity-avtomatizatsii-itp/"
+                  href="./catalog.html#itp"
                   class="banner"
                 >
                   <div
@@ -262,10 +185,10 @@
                 </a>
               </div>
 
-              <!-- Баннер 6 -->
+              <!-- Баннер 6: Вентиляция -->
               <div class="banners__item">
                 <a
-                  href="/product-category/shhity-avtomatizatsii-sistem-ventilyatsii-i-konditsionirovaniya/"
+                  href="./catalog.html#ventilyatsiya"
                   class="banner"
                 >
                   <div
@@ -279,9 +202,9 @@
                 </a>
               </div>
 
-              <!-- Баннер 7 -->
+              <!-- Баннер 7: Комплекты щитов -->
               <div class="banners__item">
-                <a href="/product-category/komplekty-shhitov/" class="banner">
+                <a href="./catalog.html#komplekty" class="banner">
                   <div
                     class="banner__image"
                     style="background-image: url(./images/dsc_0779.jpg)"
@@ -360,153 +283,8 @@
           </div>
         </section>
       </main>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer__container container">
-          <div class="footer__grid">
-            <!-- Колонка 1 -->
-            <div class="footer__col">
-              <div class="footer__section">
-                <h3 class="footer__title">О нас</h3>
-                <ul class="footer__list">
-                  <li class="footer__item">
-                    <a href="/kak-zakazat/" class="footer__link"
-                      >Как заказать</a
-                    >
-                  </li>
-                  <li class="footer__item">
-                    <a href="/dostavka-i-oplata/" class="footer__link"
-                      >Доставка и оплата</a
-                    >
-                  </li>
-                  <li class="footer__item">
-                    <a href="/contact-us/" class="footer__link">Контакты</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Колонка 2 -->
-            <div class="footer__col">
-              <div class="footer__section">
-                <ul class="footer__list">
-                  <li class="footer__item">
-                    <a href="/shop/" class="footer__link"
-                      >Щиты автоматики. Каталог</a
-                    >
-                  </li>
-                  <li class="footer__item">
-                    <a href="/portfolio/" class="footer__link">Наши работы</a>
-                  </li>
-                  <li class="footer__item">
-                    <a href="/sertifikaty-i-razresheniya/" class="footer__link"
-                      >Документация</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Колонка 3 -->
-            <div class="footer__col">
-              <div class="footer__section">
-                <h3 class="footer__title">Наши направления</h3>
-                <ul class="footer__list">
-                  <li class="footer__item">
-                    <a href="/avtomatizatsiya/" class="footer__link"
-                      >Автоматизация котельных. Разработка, монтаж, наладка,
-                      сервис</a
-                    >
-                  </li>
-                  <li class="footer__item">
-                    <a href="/shhity-avtomatiki/" class="footer__link"
-                      >Щиты автоматики. Разработка, монтаж, наладка, сервис</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Центральная колонка -->
-            <div class="footer__col footer__col--center">
-              <div class="footer__center">
-                <a href="/" class="footer__logo">
-                  <img
-                    src="./images/main-logo-min.png"
-                    alt="ТехноИмпериум"
-                    class="footer__logo-img"
-                  />
-                </a>
-                <button class="footer__callback button" data-modal="callback">
-                  Обратный звонок
-                </button>
-              </div>
-            </div>
-
-            <!-- Колонка контактов -->
-            <div class="footer__col">
-              <div class="footer__section">
-                <ul class="footer__contacts">
-                  <li class="footer__contact-item">
-                    <p class="footer__contact-text">
-                      Россия, РТ, г. Казань, ул. Восход 49
-                    </p>
-                  </li>
-                  <li class="footer__contact-item">
-                    <p class="footer__contact-text">
-                      Режим работы: с 9:00 до 18:00
-                    </p>
-                  </li>
-                  <li class="footer__contact-item">
-                    <a href="tel:+79872156000" class="footer__contact-link"
-                      >8 (987) 215 6000</a
-                    >
-                  </li>
-                  <li class="footer__contact-item">
-                    <a
-                      href="mailto:secretariat@technoimperium.ru"
-                      class="footer__contact-link"
-                      >secretariat@technoimperium.ru</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-                  <!-- Нижняя часть футера -->
-          <div class="footer__bottom">
-            <div class="footer__social">
-              <ul class="social">
-                <li class="social__item">
-                  <a
-                    href="https://t.me/TechnoImperium"
-                    target="_blank"
-                    rel="noopener"
-                    class="social__link"
-                  >
-                    Мы в TELEGRAM <span class="social__icon">→</span>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a
-                    href="https://vk.com/tehno_imperium"
-                    target="_blank"
-                    rel="noopener"
-                    class="social__link"
-                  >
-                    Мы Вконтакте <span class="social__icon">→</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer__copyright">
-              <p>«ТехноИмпериум» &copy; Казань 2020</p>
-            </div>
-          </div>
-      </footer>
+      
+      <!-- Подвал будет вставлен здесь автоматически -->
     </div>
 
     <!-- Модальное окно обратного звонка -->
@@ -546,6 +324,36 @@
     </div>
 
     <!-- Скрипты -->
-    <script src="js/main.js"></script>
+    <!-- Загрузчик компонентов (подключите этот скрипт первым) -->
+    <script src="js/components-loader.js"></script>
+    
+    <!-- Основной скрипт страницы -->
+    <script src="js/main.js" defer></script>
+
+    <script src="js/catalog-images.js"></script>
+<script src="js/gallery-generator.js" defer></script>
+    
+    <!-- Скрипт для инициализации загрузки компонентов -->
+    <script>
+      // Инициализация загрузки компонентов
+      document.addEventListener('DOMContentLoaded', function() {
+        // Создаем экземпляр загрузчика
+        const loader = new ComponentsLoader();
+        
+        // Загружаем все компоненты
+        loader.loadAllComponents().then(() => {
+          // После загрузки всех компонентов показываем основной контент
+          document.body.classList.add('components-loaded');
+          
+          // Создаем событие о завершении загрузки компонентов
+          const event = new CustomEvent('componentsLoaded');
+          document.dispatchEvent(event);
+        }).catch(error => {
+          console.error('Ошибка загрузки компонентов:', error);
+          // В случае ошибки все равно показываем контент
+          document.body.classList.add('components-loaded');
+        });
+      });
+    </script>
   </body>
 </html>

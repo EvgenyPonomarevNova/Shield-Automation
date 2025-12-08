@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Щиты автоматизации - «ТехноИмпериум»</title>
+    <meta
+      name="description"
+      content="Щиты автоматизации котельных. Разработка, монтаж, наладка, сервис."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/catalog.css" />
+
+    <!-- Стили для загрузчика компонентов -->
+    <style>
+      /* Стили для индикатора загрузки */
+      .components-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Скрываем контент до загрузки компонентов */
+      .main-content {
+        display: none;
+      }
+
+      .components-loaded .main-content {
+        display: block;
+      }
+
+      /* Убираем индикатор загрузки после загрузки компонентов */
+      .components-loaded .components-loading {
+        display: none;
+      }
+
+      /* Стили для загрузки контента категории */
+      .category-loading {
+        display: none;
+        text-align: center;
+        padding: 50px;
+        color: var(--color-dark-gray);
+      }
+
+      .category-loading--active {
+        display: block;
+      }
+
+      .category-content {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      .category-content--loading {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+
+  <body class="page page--catalog">
+    <!-- Индикатор загрузки компонентов -->
+    <div class="components-loading">
+      <div class="loading-spinner"></div>
+      <p>Загрузка сайта...</p>
+    </div>
+
+    <!-- Основной контейнер для динамической загрузки компонентов -->
+    <div class="page__wrapper main-content">
+      <!-- Шапка будет вставлена здесь автоматически -->
+
+      <!-- Хлебные крошки -->
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container container">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__current" id="current-category"
+                >Щиты автоматизации котельных</span
+              >
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Основной контент -->
+      <main class="main main--catalog">
+        <div class="catalog-page">
+          <div class="catalog-page__container container">
+            <div class="catalog-page__layout">
+              <!-- Левая колонка - меню категорий -->
+              <aside class="catalog-sidebar">
+                <div class="catalog-sidebar__mobile-toggle hidden-lg-up">
+                  <button class="catalog-sidebar__toggle-btn">Каталог</button>
+                </div>
+
+                <div class="catalog-sidebar__content">
+                  <nav class="catalog-menu">
+                    <h2 class="catalog-menu__title visually-hidden">
+                      Категории товаров
+                    </h2>
+                    <ul class="catalog-menu__list">
+                      <li
+                        class="catalog-menu__item catalog-menu__item--current"
+                        data-category="kotelnye"
+                      >
+                        <a href="#kotelnye" class="catalog-menu__link"
+                          >Щиты автоматизации котельных</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="itp">
+                        <a href="#itp" class="catalog-menu__link"
+                          >Щиты автоматизации ИТП</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="nasosy">
+                        <a href="#nasosy" class="catalog-menu__link"
+                          >Щиты автоматизации насосов</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="kns">
+                        <a href="#kns" class="catalog-menu__link"
+                          >Щиты автоматизации КНС</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="kamery">
+                        <a href="#kamery" class="catalog-menu__link"
+                          >Щиты автоматизации покрасочно-сушильных камер</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="asu-tp">
+                        <a href="#asu-tp" class="catalog-menu__link"
+                          >Щиты автоматизации для АСУ ТП</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="kotly">
+                        <a href="#kotly" class="catalog-menu__link"
+                          >Щиты автоматизации котлов</a
+                        >
+                      </li>
+                      <li
+                        class="catalog-menu__item"
+                        data-category="ovoshchehranilishcha"
+                      >
+                        <a
+                          href="#ovoshchehranilishcha"
+                          class="catalog-menu__link"
+                          >Щиты автоматизации овощехранилищ</a
+                        >
+                      </li>
+                      <li
+                        class="catalog-menu__item"
+                        data-category="ventilyatsiya"
+                      >
+                        <a href="#ventilyatsiya" class="catalog-menu__link"
+                          >Щиты автоматизации систем вентиляции и
+                          кондиционирования</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="vru">
+                        <a href="#vru" class="catalog-menu__link"
+                          >ВРУ (Вводно-распределительное устройство)</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="komplekty">
+                        <a href="#komplekty" class="catalog-menu__link"
+                          >Комплект щитов для котельной</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="etazhnye">
+                        <a href="#etazhnye" class="catalog-menu__link"
+                          >Щиты этажные</a
+                        >
+                      </li>
+                      <li
+                        class="catalog-menu__item"
+                        data-category="vosstanovlenie"
+                      >
+                        <a href="#vosstanovlenie" class="catalog-menu__link"
+                          >Восстановление и ремонт щитов автоматизации</a
+                        >
+                      </li>
+                      <li class="catalog-menu__item" data-category="lebedki">
+                        <a href="#lebedki" class="catalog-menu__link"
+                          >Щит автоматизации лебёдки</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </aside>
+
+              <!-- Правая колонка - динамический контент -->
+              <div class="catalog-content">
+                <!-- Индикатор загрузки -->
+                <div class="category-loading" id="category-loading">
+                  <div class="loading-spinner"></div>
+                  <p>Загрузка контента...</p>
+                </div>
+
+                <!-- Контейнер для динамического контента -->
+                <div class="category-content" id="category-content">
+                  <!-- Контент будет загружен динамически -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Подвал будет вставлен здесь автоматически -->
+    </div>
+
+    <!-- Модальное окно обратного звонка -->
+    <div class="modal" id="callback">
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <div class="modal__content">
+          <button class="modal__close" aria-label="Закрыть окно">×</button>
+
+          <div class="callback-form">
+            <h3 class="callback-form__title">Заказать обратный звонок</h3>
+            <p class="callback-form__description">
+              Введите номер телефона и мы Вам перезвоним в ближайшее время
+            </p>
+
+            <form class="callback-form__form">
+              <div class="callback-form__field">
+                <label class="callback-form__label"
+                  >Телефон<span>*</span></label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  class="callback-form__input"
+                  required
+                  placeholder="+7 (___) ___-__-__"
+                />
+              </div>
+
+              <button type="submit" class="callback-form__button button">
+                Жду звонка
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скрипты -->
+    <!-- Загрузчик компонентов -->
+    <script src="js/components-loader.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/gallery-generator.js" defer></script>
+    <script src="js/catalog-dynamic.js" defer></script>
+
+    <!-- Скрипт для инициализации загрузки компонентов -->
+    <script>
+      // Инициализация загрузки компонентов
+      document.addEventListener("DOMContentLoaded", function () {
+        // Создаем экземпляр загрузчика
+        const loader = new ComponentsLoader();
+
+        // Загружаем все компоненты
+        loader
+          .loadAllComponents()
+          .then(() => {
+            // После загрузки всех компонентов показываем основной контент
+            document.body.classList.add("components-loaded");
+
+            // Создаем событие о завершении загрузки компонентов
+            const event = new CustomEvent("componentsLoaded");
+            document.dispatchEvent(event);
+          })
+          .catch((error) => {
+            console.error("Ошибка загрузки компонентов:", error);
+            // В случае ошибки все равно показываем контент
+            document.body.classList.add("components-loaded");
+          });
+      });
+    </script>
+  </body>
+</html>
