@@ -207,3 +207,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 3000);
 });
+
+// Обработка поиска в шапке
+document.addEventListener('DOMContentLoaded', function() {
+  const searchToggle = document.querySelector('.search__toggle');
+  const searchForm = document.querySelector('.search__form');
+  const searchInput = document.querySelector('.search__input');
+  const searchClose = document.querySelector('.search__close');
+  
+  if (searchToggle && searchForm) {
+    // Открытие/закрытие формы поиска
+    searchToggle.addEventListener('click', function() {
+      searchForm.classList.add('search__form--active');
+      if (searchInput) searchInput.focus();
+    });
+    
+    if (searchClose) {
+      searchClose.addEventListener('click', function() {
+        searchForm.classList.remove('search__form--active');
+      });
+    }
+    
+    // Обработка отправки формы поиска
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (searchInput && searchInput.value.trim()) {
+        const query = searchInput.value.trim();
+        // Переходим на страницу поиска с параметром
+        window.location.href = `search.html?s=${encodeURIComponent(query)}`;
+      }
+    });
+    
+    // Закрытие по ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && searchForm.classList.contains('search__form--active')) {
+        searchForm.classList.remove('search__form--active');
+      }
+    });
+  }
+  
+  // Обработка поиска на странице поиска
+  if (window.location.pathname.includes('search.html')) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('s');
+    
+    if (query && typeof window.SearchEngine !== 'undefined') {
+      window.SearchEngine.search(query);
+    }
+  }
+});

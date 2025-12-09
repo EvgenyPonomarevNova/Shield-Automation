@@ -2,11 +2,7 @@
 <header class="header">
   <div class="header__container container">
     <!-- Мобильное меню -->
-    <button
-      class="header__menu-toggle"
-      type="button"
-      aria-label="Открыть меню"
-    >
+    <button class="header__menu-toggle" type="button" aria-label="Открыть меню">
       <span class="header__menu-text">Меню</span>
     </button>
 
@@ -31,7 +27,9 @@
               >
             </li>
             <li class="catalog__item">
-              <a href="../catalog.html" class="catalog__link">Щиты автоматики. Каталог</a>
+              <a href="../catalog.html" class="catalog__link"
+                >Щиты автоматики. Каталог</a
+              >
             </li>
             <li class="catalog__item">
               <a href="../portfolio.html" class="catalog__link">Наши работы</a>
@@ -78,30 +76,22 @@
 
       <!-- Поиск -->
       <div class="search">
-        <button
-          class="search__toggle"
-          type="button"
-          aria-label="Открыть поиск"
-        >
-          <svg
-            class="search__icon"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-          >
+        <button class="search__toggle" type="button" aria-label="Открыть поиск">
+          <svg class="search__icon" width="16" height="16" viewBox="0 0 16 16">
             <circle cx="6.2" cy="6.2" r="5.1" />
             <line x1="10.9" y1="10.9" x2="15.5" y2="15.5" />
           </svg>
         </button>
 
-        <form class="search__form" action="/search/">
+        <form class="search__form" action="search.html" method="get">
           <input
             type="text"
             class="search__input"
-            placeholder="Поиск..."
+            placeholder="Поиск по сайту..."
             name="s"
+            required
           />
-          <button type="submit" class="search__submit">
+          <button type="submit" class="search__submit" aria-label="Найти">
             <svg
               class="search__icon"
               width="16"
@@ -116,7 +106,12 @@
             type="button"
             class="search__close"
             aria-label="Закрыть поиск"
-          ></button>
+          >
+            <svg width="12" height="12" viewBox="0 0 12 12">
+              <line x1="1" y1="1" x2="11" y2="11" stroke="currentColor" />
+              <line x1="11" y1="1" x2="1" y2="11" stroke="currentColor" />
+            </svg>
+          </button>
         </form>
       </div>
     </nav>
