@@ -1,0 +1,336 @@
+/* portfolio.css */
+/* Стили для страницы портфолио */
+
+.portfolio-page {
+  padding: 40px 0 80px;
+  background: var(--color-secondary);
+}
+
+.portfolio-page__container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.portfolio-page__title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 40px 0;
+  padding-bottom: 15px;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.portfolio-page__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: var(--color-accent);
+}
+
+/* Фильтр */
+.portfolio-filter {
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--color-gray);
+  padding-bottom: 20px;
+}
+
+.portfolio-filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-filter__item {
+  margin: 0;
+}
+
+.portfolio-filter__button {
+  background: var(--color-light-gray);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  white-space: nowrap;
+}
+
+.portfolio-filter__button:hover {
+  background: var(--color-gray);
+  transform: translateY(-2px);
+}
+
+.portfolio-filter__button--active {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+}
+
+.portfolio-filter__button--active:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-secondary);
+}
+
+/* Галерея */
+.portfolio-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.portfolio-item {
+  background: var(--color-secondary);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-smooth);
+  display: block;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.portfolio-item__image {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.portfolio-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.portfolio-item:hover .portfolio-item__image img {
+  transform: scale(1.05);
+}
+
+.portfolio-item__content {
+  padding: 25px;
+}
+
+.portfolio-item__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.portfolio-item__description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Сообщение "не найдено" */
+.portfolio-empty {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-secondary) 100%);
+  border: 2px dashed var(--color-gray);
+  border-radius: var(--border-radius-lg);
+}
+
+.portfolio-empty__content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.portfolio-empty__text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 25px;
+}
+
+.portfolio-empty__button {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 12px 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.portfolio-empty__button:hover {
+  background: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 1199px) {
+  .portfolio-page__container {
+    padding: 0 30px;
+  }
+  
+  .portfolio-page__title {
+    font-size: 36px;
+  }
+  
+  .portfolio-gallery__grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .portfolio-page {
+    padding: 30px 0 60px;
+  }
+  
+  .portfolio-page__container {
+    padding: 0 20px;
+  }
+  
+  .portfolio-page__title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .portfolio-page__title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .portfolio-filter {
+    margin-bottom: 30px;
+  }
+  
+  .portfolio-filter__list {
+    justify-content: center;
+  }
+  
+  .portfolio-filter__button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .portfolio-gallery__grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .portfolio-item__content {
+    padding: 20px;
+  }
+  
+  .portfolio-item__title {
+    font-size: 16px;
+  }
+  
+  .portfolio-empty {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-page__title {
+    font-size: 26px;
+  }
+  
+  .portfolio-filter__list {
+    gap: 10px;
+  }
+  
+  .portfolio-filter__button {
+    padding: 6px 12px;
+    font-size: 12px;
+    white-space: normal;
+    text-align: center;
+  }
+  
+  .portfolio-gallery__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .portfolio-item__image {
+    height: 200px;
+  }
+  
+  .portfolio-empty__text {
+    font-size: 18px;
+  }
+  
+  .portfolio-empty__button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .portfolio-page {
+    padding: 20px 0 40px;
+  }
+  
+  .portfolio-page__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-filter {
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-gallery__grid {
+    gap: 15px;
+  }
+  
+  .portfolio-item__image {
+    height: 180px;
+  }
+  
+  .portfolio-item__content {
+    padding: 15px;
+  }
+  
+  .portfolio-item__title {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio-item__description {
+    font-size: 13px;
+  }
+  
+  .portfolio-empty {
+    padding: 30px 15px;
+  }
+  
+  .portfolio-empty__text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}

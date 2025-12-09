@@ -1,0 +1,189 @@
+/* documentation.css */
+/* Стили для страницы документации */
+
+.documentation-page {
+  padding: 40px 0 80px;
+  background: var(--color-secondary);
+}
+
+.documentation-page__container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.documentation-page__title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 40px 0;
+  padding-bottom: 15px;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.documentation-page__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: var(--color-accent);
+}
+
+/* Галерея */
+.documentation-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.documentation-item {
+  background: var(--color-secondary);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-smooth);
+  display: block;
+}
+
+.documentation-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.documentation-item__image {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.documentation-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s ease;
+}
+
+.documentation-item:hover .documentation-item__image img {
+  transform: scale(1.05);
+}
+
+.documentation-item__content {
+  padding: 20px;
+  border-top: 1px solid var(--color-gray);
+}
+
+.documentation-item__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 1199px) {
+  .documentation-page__container {
+    padding: 0 30px;
+  }
+  
+  .documentation-page__title {
+    font-size: 36px;
+  }
+  
+  .documentation-gallery__grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .documentation-page {
+    padding: 30px 0 60px;
+  }
+  
+  .documentation-page__container {
+    padding: 0 20px;
+  }
+  
+  .documentation-page__title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .documentation-page__title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .documentation-gallery__grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .documentation-item__image {
+    height: 350px;
+  }
+  
+  .documentation-item__title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .documentation-page__title {
+    font-size: 26px;
+  }
+  
+  .documentation-gallery__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .documentation-item__image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 575px) {
+  .documentation-page {
+    padding: 20px 0 40px;
+  }
+  
+  .documentation-page__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .documentation-gallery__grid {
+    gap: 15px;
+  }
+  
+  .documentation-item__image {
+    height: 250px;
+    padding: 15px;
+  }
+  
+  .documentation-item__content {
+    padding: 15px;
+  }
+  
+  .documentation-item__title {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Щиты автоматики. Разработка, монтаж, наладка, сервис - «ТехноИмпериум»
+    </title>
+    <meta
+      name="description"
+      content="ООО 'Щит-Автоматика' – разработчик и производитель щитов автоматизации для самого широкого спектра применения."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/avtomatizatsiya.css" />
+
+    <!-- Шрифты -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Стили для загрузчика компонентов -->
+    <style>
+      /* Стили для индикатора загрузки */
+      .components-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Скрываем контент до загрузки компонентов */
+      .main-content {
+        display: none;
+      }
+
+      .components-loaded .main-content {
+        display: block;
+      }
+
+      /* Убираем индикатор загрузки после загрузки компонентов */
+      .components-loaded .components-loading {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="page">
+    <!-- Индикатор загрузки компонентов -->
+    <div class="components-loading">
+      <div class="loading-spinner"></div>
+      <p>Загрузка сайта...</p>
+    </div>
+
+    <!-- Основной контейнер для динамической загрузки компонентов -->
+    <div class="page__wrapper main-content">
+      <!-- Шапка будет вставлена здесь автоматически -->
+
+      <!-- Хлебные крошки -->
+      <div class="crumbs-wrap hidden-md-down">
+        <div class="container-fluid">
+          <ol class="breadcrumbs reset-ul">
+            <li>
+              <span>
+                <span>
+                  <a href="/">Главная</a> &gt;
+                  <span class="breadcrumb_last" aria-current="page">
+                    Щиты автоматики. Разработка, монтаж, наладка, сервис
+                  </span>
+                </span>
+              </span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Основной контент -->
+      <main class="main">
+        <div class="container">
+          <div class="row">
+            <div class="product-col infotxt">
+              <!-- Заголовок для десктопа (скрыт на мобильных) -->
+              <h1 class="product-h1 hidden-md-down">
+                Щиты автоматики. Разработка, монтаж, наладка, сервис
+              </h1>
+
+              <!-- Контент страницы -->
+              <div class="services-content">
+                <p>
+                  ООО "Щит-Автоматика" – разработчик и производитель щитов
+                  автоматизации для самого широкого спектра применения.
+                </p>
+                <p>
+                  <strong style="font-size: 20px"
+                    >Мы осуществляем полный цикл от разработки, производства,
+                    монтажа и ремонта до модернизации щитов автоматизации в
+                    любом регионе РФ.</strong
+                  >
+                </p>
+                <p>
+                  Наша компания была основана в начале 2017 г. К этому времени
+                  сотрудниками компании был накоплен богатый опыт в
+                  проектировании, монтаже, наладке и эксплуатации АСУ ТП, что
+                  позволило приступить не только к изготовлению щитов автоматики
+                  по готовым проектам, но и самостоятельно разрабатывать и
+                  выпускать щиты автоматизации под любые запросы, а также
+                  производить модернизацию и реконструкцию ранее выпущенного
+                  щитового оборудования в составе различных АСУ ТП.
+                </p>
+                <h4>
+                  Проектируются и выпускаются (в т. ч. и серийно) щиты
+                  автоматизации для:
+                </h4>
+                <div class="services-content__layout">
+                  <div class="services-content__text">
+                    <ul
+                      class="services-list"
+                      style="margin-left: 0px; padding-right: 20px"
+                    >
+                      <li class="services-list__item">
+                        <a href="catalog.html#kotelnye">Щиты для котельных</a>
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#itp">Щиты для ИТП</a>
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#nasosy">Щиты для насосов</a>
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#kns">Щиты для КНС</a>
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#kamery"
+                          >Щиты автоматизации покрасочно-сушильных камер</a
+                        >
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#asu-tp">Щиты для АСУ ТП</a>
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#kotly">Щиты для котлов</a>
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#ovoshchehranilishcha"
+                          >Щиты для овощехранилищ</a
+                        >
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#ventilyatsiya"
+                          >Щиты для вентиляции</a
+                        >
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#vru">ВРУ</a>
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#komplekty">Комплекты щитов</a>
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#etazhnye">Щиты этажные</a>
+                      </li>
+                      <li class="services-list__item">
+                        <a href="catalog.html#vosstanovlenie">Ремонт щитов</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p>
+                      <strong
+                        ><a href="catalog.html#vosstanovlenie"
+                          >Выполняем работы по ремонту и модернизации щитов
+                          автоматизации.</a
+                        ></strong
+                      >
+                    </p>
+
+                    <div style="margin: 30px 0; text-align: center">
+                      <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/G7ZMkwddVs0"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      >
+                      </iframe>
+                    </div>
+
+                    <p>
+                      <strong style="font-size: 20px"
+                        >Цены – всегда с учётом пожеланий заказчика!</strong
+                      >
+                    </p>
+                  </div>
+                </div>
+                <!-- Форма обратной связи -->
+                <div class="services-form" id="zajav">
+                  <div class="project__form contact_form">
+                    <div class="callback-form">
+                      <div class="form__wrap">
+                        <h3 class="form__title">ОБРАТНАЯ СВЯЗЬ</h3>
+
+                        <form class="callback-form__form">
+                          <div class="callback-form__field">
+                            <input
+                              type="tel"
+                              name="phone"
+                              class="callback-form__input form__input form__input-phone"
+                              required
+                              placeholder="Ваш телефон"
+                            />
+                          </div>
+
+                          <div class="callback-form__field">
+                            <input
+                              type="email"
+                              name="email"
+                              class="callback-form__input form__input form__input-mail"
+                              required
+                              placeholder="Ваш e-mail"
+                            />
+                          </div>
+
+                          <button
+                            type="submit"
+                            class="callback-form__button button form__button"
+                          >
+                            Отправить
+                          </button>
+
+                          <p class="callback-form__note form__text">
+                            Все ваши данные конфиденциальны. <br />
+                            Мы не передаем ваши данные третьим лицам и не
+                            рассылаем спам.
+                          </p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  Оказываем консультационные услуги проектным, монтажным и
+                  сервисным компаниям по вопросам разработки, монтажа, наладки и
+                  обслуживания щитов автоматики в составе АСУ ТП. Осуществляем
+                  техническую поддержку на стадиях разработки технического
+                  задания и проекта, монтажных и пусконаладочных работ.
+                </p>
+                <p>
+                  <strong style="font-size: 20px"
+                    >Доставка щитов до любой точки ЕврАзЭС – за наш
+                    счёт!</strong
+                  >
+                </p>
+                <p>
+                  Также производим строительно-монтажные и пусконаладочные
+                  работы систем автоматизации и электромонтажу.
+                </p>
+                <p>
+                  <strong style="font-size: 20px"
+                    >Автоматизировать – как? Решим и избавим вас от головной
+                    боли!</strong
+                  >
+                </p>
+
+                <div class="services-portfolio">
+                  <h3
+                    class="services-portfolio__title"
+                    style="text-align: center"
+                  >
+                    <strong>Наши работы</strong>
+                  </h3>
+
+                  <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Карточки будут добавлены через JavaScript -->
+                  </div>
+
+                  <div class="portfolio-load-more">
+                    <button
+                      class="portfolio-load-more__button button"
+                      id="load-more"
+                    >
+                      Показать еще
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Подвал будет вставлен здесь автоматически -->
+    </div>
+
+    <!-- Модальное окно обратного звонка -->
+    <div class="modal" id="callback">
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <div class="modal__content">
+          <button class="modal__close" aria-label="Закрыть окно">×</button>
+
+          <div class="callback-form">
+            <h3 class="callback-form__title">Заказать обратный звонок</h3>
+            <p class="callback-form__description">
+              Введите номер телефона и мы Вам перезвоним в ближайшее время
+            </p>
+
+            <form class="callback-form__form">
+              <div class="callback-form__field">
+                <label class="callback-form__label"
+                  >Телефон<span>*</span></label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  class="callback-form__input"
+                  required
+                  placeholder="+7 (___) ___-__-__"
+                />
+              </div>
+
+              <button type="submit" class="callback-form__button button">
+                Жду звонка
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скрипты -->
+    <!-- Загрузчик компонентов -->
+    <script src="js/components-loader.js"></script>
+
+    <!-- Основной скрипт страницы -->
+    <script src="js/main.js" defer></script>
+
+    <!-- Скрипт для портфолио -->
+    <script>
+      // Данные портфолио (адаптировано под новый формат)
+      const portfolioItems = [
+        {
+          id: 1,
+          image: "./images/portfolio/Autoshields/1.jpg",
+          title: "Щиты автоматизации насосов ЩА-000008.х, нп Юбилейный",
+        },
+        {
+          id: 2,
+          image: "./images/portfolio/Autoshields/2.jpg",
+          title:
+            "Щит автоматизации насосов ЩА-000008.х и ВРУ, Марий-Эл, нп Юбилейный",
+        },
+        {
+          id: 3,
+          image: "./images/portfolio/Autoshields/3.jpg",
+          title: "Щиты автоматизации насосов ЩА-000008.х, Татарстан, г. Казань",
+        },
+        {
+          id: 4,
+          image: "./images/portfolio/Autoshields/4.jpg",
+          title:
+            "Щит автоматизации котла ЩА-000007 для котла RS-D, Лаишевский район РТ, 2017 г.",
+        },
+        {
+          id: 5,
+          image: "./images/portfolio/Autoshields/5.jpg",
+          title:
+            "Ремонт блока БУРС-1 и замена блока коммутационных элементов на паровом котле ДЕ-1/9, Буинский район РТ, 2017 г.",
+        },
+        {
+          id: 6,
+          image: "./images/portfolio/Autoshields/6.jpg",
+          title:
+            "Модернизация щита автоматизации блочно-модульной котельной, Татарстан, нп Киндери 1",
+        },
+        {
+          id: 7,
+          image: "./images/portfolio/Autoshields/7.jpg",
+          title:
+            "Модернизация щита автоматизации блочно-модульной котельной, Татарстан, нп Киндери 2",
+        },
+        {
+          id: 8,
+          image: "./images/portfolio/Autoshields/8.jpg",
+          title:
+            "Модернизация щита автоматизации котла КВС – 1, Чувашия, Чебоксары 1",
+        },
+        {
+          id: 9,
+          image: "./images/portfolio/Autoshields/9.jpg",
+          title:
+            "Модернизация щита автоматизации котла КВС – 1, Чувашия, Чебоксары 2",
+        },
+        {
+          id: 10,
+          image: "./images/portfolio/Autoshields/10.jpg",
+          title:
+            "Модернизация щита автоматизации котла КВС – 1, Чувашия, Чебоксары 3",
+        },
+        {
+          id: 11,
+          image: "./images/portfolio/Autoshields/11.jpg",
+          title:
+            "Модернизация щита автоматизации котла КВС – 1, Чувашия, Чебоксары 4",
+        },
+        {
+          id: 12,
+          image: "./images/portfolio/Autoshields/12.jpg",
+          title:
+            "Модернизация щита автоматизации котла КВС – 1, Чувашия, Чебоксары 5",
+        },
+        {
+          id: 13,
+          image: "./images/portfolio/Autoshields/13.jpg",
+          title:
+            "Щит автоматизации котельной ЩА-000006.х, Татарстан, Лаишевский район 1",
+        },
+        {
+          id: 14,
+          image: "./images/portfolio/Autoshields/14.jpg",
+          title:
+            "Щит автоматизации котельной ЩА-000006.х, Татарстан, Лаишевский район 2",
+        },
+        {
+          id: 15,
+          image: "./images/portfolio/Autoshields/15.jpg",
+          title:
+            "Щит автоматизации паровой котельной ЩА-0000021, Марий-Эл, нп Юбилейный",
+        },
+        {
+          id: 16,
+          image: "./images/portfolio/Autoshields/16.jpg",
+          title:
+            "Щит автоматизации теплогенератора ЩА-000018, Татарстан, Казань 1",
+        },
+        {
+          id: 17,
+          image: "./images/portfolio/Autoshields/17.jpg",
+          title:
+            "Щит автоматизации теплогенератора ЩА-000018, Татарстан, Казань 2",
+        },
+        {
+          id: 18,
+          image: "./images/portfolio/Autoshields/18.jpg",
+          title:
+            "Восстановление работоспособности щита автоматизации блочно-модульной котельной, нп Киндери Высокогорский район РТ, 2017 г.",
+        },
+        {
+          id: 19,
+          image: "./images/portfolio/Autoshields/19.jpg",
+          title: "Модернизация автоматики гильотины, Марий-Эл, Йошкар-Ола 1",
+        },
+        {
+          id: 20,
+          image: "./images/portfolio/Autoshields/20.jpg",
+          title: "Модернизация автоматики гильотины, Марий-Эл, Йошкар-Ола 2",
+        },
+        {
+          id: 21,
+          image: "./images/portfolio/Autoshields/21.jpg",
+          title: "Модернизация автоматики гильотины, Марий-Эл, Йошкар-Ола 3",
+        },
+        {
+          id: 22,
+          image: "./images/portfolio/Autoshields/22.jpg",
+          title: "Модернизация щита управления прессом, Марий-Эл, Йошкар-Ола 1",
+        },
+        {
+          id: 23,
+          image: "./images/portfolio/Autoshields/23.jpg",
+          title: "Модернизация щита управления прессом, Марий-Эл, Йошкар-Ола 2",
+        },
+        {
+          id: 24,
+          image: "./images/portfolio/Autoshields/24.jpg",
+          title: "Модернизация щита управления прессом, Марий-Эл, Йошкар-Ола 3",
+        },
+        {
+          id: 25,
+          image: "./images/portfolio/Autoshields/25.jpg",
+          title: "Щит автоматизации ИТП ЩА-000014.х, Татарстан, Казань 1",
+        },
+        {
+          id: 26,
+          image: "./images/portfolio/Autoshields/26.jpg",
+          title: "Щит автоматизации ИТП ЩА-000014.х, Татарстан, Казань 2",
+        },
+        {
+          id: 27,
+          image: "./images/portfolio/Autoshields/27.jpg",
+          title:
+            "Щит автоматизации овощехранилища ЩА-000023, Татарстан, Бирюли 1",
+        },
+        {
+          id: 28,
+          image: "./images/portfolio/Autoshields/28.jpg",
+          title:
+            "Щит автоматизации овощехранилища ЩА-000023, Татарстан, Бирюли 2",
+        },
+      ];
+
+      // Конфигурация
+      const portfolioConfig = {
+        itemsPerLoad: 6,
+        initialVisible: 6,
+        itemsPerRow: 3,
+      };
+
+      // Функция создания карточки портфолио с одинаковой высотой
+      function createPortfolioItem(item) {
+        return `
+            <div class="col-lg-4 col-md-12 col-sm-4 col-12">
+                <a href="${item.image}" class="portfolio-item" data-lightbox="portfolio" data-title="${item.title}">
+                    <div class="portfolio-item__image">
+                        <img src="${item.image}" alt="${item.title}" class="portfolio-item__img img-responsive">
+                    </div>
+                    <div class="portfolio-item__title">
+                        <div class="portfolio-item__title-inner">${item.title}</div>
+                    </div>
+                </a>
+            </div>
+            `;
+      }
+
+      // Функция инициализации портфолио
+      function initPortfolio() {
+        const portfolioGrid = document.getElementById("portfolio-grid");
+        const loadMoreBtn = document.getElementById("load-more");
+
+        if (!portfolioGrid) return;
+
+        let visibleCount = portfolioConfig.initialVisible;
+
+        // Рендерим начальные элементы
+        renderPortfolioItems();
+
+        // Обработчик кнопки "Показать еще"
+        if (loadMoreBtn) {
+          loadMoreBtn.addEventListener("click", function () {
+            visibleCount += portfolioConfig.itemsPerLoad;
+            renderPortfolioItems();
+
+            // Скрываем кнопку если все элементы показаны
+            if (visibleCount >= portfolioItems.length) {
+              loadMoreBtn.style.display = "none";
+            }
+          });
+        }
+
+        // Инициализация лайтбокса при клике на изображение
+        initLightbox();
+
+        function renderPortfolioItems() {
+          portfolioGrid.innerHTML = "";
+
+          // Создаем контейнер row
+          let html = '<div class="row">';
+
+          for (
+            let i = 0;
+            i < Math.min(visibleCount, portfolioItems.length);
+            i++
+          ) {
+            html += createPortfolioItem(portfolioItems[i]);
+
+            // Закрываем и открываем новую строку каждые 3 элемента
+            if (
+              (i + 1) % portfolioConfig.itemsPerRow === 0 &&
+              i < visibleCount - 1
+            ) {
+              html += '</div><div class="row">';
+            }
+          }
+
+          html += "</div>";
+          portfolioGrid.innerHTML = html;
+
+          // Скрываем кнопку если все элементы показаны
+          if (visibleCount >= portfolioItems.length && loadMoreBtn) {
+            loadMoreBtn.style.display = "none";
+          }
+        }
+      }
+
+      // Функция инициализации лайтбокса
+      function initLightbox() {
+        // Простой лайтбокс на CSS/JS
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+        portfolioItems.forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const src = this.getAttribute("href");
+            const title = this.getAttribute("data-title");
+
+            // Создаем модальное окно для лайтбокса
+            const lightbox = document.createElement("div");
+            lightbox.className = "lightbox";
+            lightbox.innerHTML = `
+                      <div class="lightbox__overlay"></div>
+                      <div class="lightbox__content">
+                        <button class="lightbox__close">&times;</button>
+                        <img src="${src}" alt="${title}" class="lightbox__img">
+                        <div class="lightbox__title">${title}</div>
+                      </div>
+                    `;
+
+            document.body.appendChild(lightbox);
+            document.body.style.overflow = "hidden";
+
+            // Закрытие лайтбокса
+            const closeBtn = lightbox.querySelector(".lightbox__close");
+            const overlay = lightbox.querySelector(".lightbox__overlay");
+
+            const closeLightbox = () => {
+              document.body.removeChild(lightbox);
+              document.body.style.overflow = "";
+            };
+
+            closeBtn.addEventListener("click", closeLightbox);
+            overlay.addEventListener("click", closeLightbox);
+
+            // Закрытие по ESC
+            document.addEventListener("keydown", function (e) {
+              if (e.key === "Escape") {
+                closeLightbox();
+              }
+            });
+          });
+        });
+      }
+
+      // Инициализация после загрузки DOM
+      document.addEventListener("DOMContentLoaded", initPortfolio);
+      document.addEventListener("componentsLoaded", initPortfolio);
+    </script>
+
+    <!-- Скрипт для инициализации загрузки компонентов -->
+    <script>
+      // Инициализация загрузки компонентов
+      document.addEventListener("DOMContentLoaded", function () {
+        // Создаем экземпляр загрузчика
+        const loader = new ComponentsLoader();
+
+        // Загружаем все компоненты
+        loader
+          .loadAllComponents()
+          .then(() => {
+            // После загрузки всех компонентов показываем основной контент
+            document.body.classList.add("components-loaded");
+
+            // Создаем событие о завершении загрузки компонентов
+            const event = new CustomEvent("componentsLoaded");
+            document.dispatchEvent(event);
+          })
+          .catch((error) => {
+            console.error("Ошибка загрузки компонентов:", error);
+            // В случае ошибки все равно показываем контент
+            document.body.classList.add("components-loaded");
+          });
+      });
+    </script>
+  </body>
+</html>

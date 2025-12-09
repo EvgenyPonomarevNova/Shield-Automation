@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Документация - «ТехноИмпериум»</title>
+    <meta
+      name="description"
+      content="Сертификаты и разрешения компании «ТехноИмпериум». Официальная документация, лицензии, свидетельства."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="./css/style.css" />
+    
+    <!-- Стили для страницы документации -->
+    <link rel="stylesheet" href="./css/documentation.css" />
+    
+    <!-- Стили для загрузчика компонентов -->
+    <style>
+      /* Стили для индикатора загрузки */
+      .components-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Скрываем контент до загрузки компонентов */
+      .main-content {
+        display: none;
+      }
+      
+      .components-loaded .main-content {
+        display: block;
+      }
+      
+      /* Убираем индикатор загрузки после загрузки компонентов */
+      .components-loaded .components-loading {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="page page--documentation">
+    <!-- Индикатор загрузки компонентов -->
+    <div class="components-loading">
+      <div class="loading-spinner"></div>
+      <p>Загрузка сайта...</p>
+    </div>
+    
+    <!-- Основной контейнер для динамической загрузки компонентов -->
+    <div class="page__wrapper main-content">
+      <!-- Шапка будет вставлена здесь автоматически -->
+      
+      <!-- Хлебные крошки -->
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__current">Документация</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Основной контент -->
+      <main class="main">
+        <section class="documentation-page">
+          <div class="documentation-page__container container">
+            <h1 class="documentation-page__title">Документация</h1>
+            
+            <!-- Галерея документов -->
+            <div class="documentation-gallery">
+              <div class="documentation-gallery__grid">
+                
+                <!-- Документы -->
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/1.jpg" alt="Сертификат соответствия">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат соответствия</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/2.jpg" alt="Сертификат">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/3.jpg" alt="Сертификат соответствия">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат соответствия</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/4.jpg" alt="Сертификат">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/5.jpg" alt="Свидетельство">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Свидетельство</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/6.jpg" alt="Сертификат соответствия">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат соответствия</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/7.jpg" alt="Сертификат">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/8.jpg" alt="Свидетельство">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Свидетельство</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/9.jpg" alt="Сертификат">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/10.jpg" alt="Сертификат соответствия">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат соответствия</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/11.jpg" alt="Сертификат">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/12.jpg" alt="Свидетельство">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Свидетельство</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/13.jpg" alt="Сертификат">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/14.jpg" alt="Сертификат">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/15.jpg" alt="Сертификат">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/16.jpg" alt="Свидетельство">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Свидетельство</h3>
+                  </div>
+                </div>
+
+                <div class="documentation-item" data-category="certificates">
+                  <div class="documentation-item__image">
+                    <img src="./images/documentation/17.jpg" alt="Сертификат">
+                  </div>
+                  <div class="documentation-item__content">
+                    <h3 class="documentation-item__title">Сертификат</h3>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <!-- Подвал будет вставлен здесь автоматически -->
+    </div>
+
+    <!-- Модальное окно обратного звонка -->
+    <div class="modal" id="callback">
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <div class="modal__content">
+          <button class="modal__close" aria-label="Закрыть окно">×</button>
+
+          <div class="callback-form">
+            <h3 class="callback-form__title">Заказать обратный звонок</h3>
+            <p class="callback-form__description">
+              Введите номер телефона и мы Вам перезвоним в ближайшее время
+            </p>
+
+            <form class="callback-form__form">
+              <div class="callback-form__field">
+                <label class="callback-form__label"
+                  >Телефон<span>*</span></label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  class="callback-form__input"
+                  required
+                  placeholder="+7 (___) ___-__-__"
+                />
+              </div>
+
+              <button type="submit" class="callback-form__button button">
+                Жду звонка
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скрипты -->
+    <!-- Загрузчик компонентов (подключите этот скрипт первым) -->
+    <script src="js/components-loader.js"></script>
+    
+    <!-- Основной скрипт страницы -->
+    <script src="js/main.js" defer></script>
+    
+    <!-- Скрипт для просмотра изображений документов -->
+    <script src="js/documentation-viewer.js" defer></script>
+    
+    <!-- Скрипт для инициализации загрузки компонентов -->
+    <script>
+      // Инициализация загрузки компонентов
+      document.addEventListener('DOMContentLoaded', function() {
+        // Создаем экземпляр загрузчика
+        const loader = new ComponentsLoader();
+        
+        // Загружаем все компоненты
+        loader.loadAllComponents().then(() => {
+          // После загрузки всех компонентов показываем основной контент
+          document.body.classList.add('components-loaded');
+          
+          // Создаем событие о завершении загрузки компонентов
+          const event = new CustomEvent('componentsLoaded');
+          document.dispatchEvent(event);
+        }).catch(error => {
+          console.error('Ошибка загрузки компонентов:', error);
+          // В случае ошибки все равно показываем контент
+          document.body.classList.add('components-loaded');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Результаты поиска - «ТехноИмпериум»</title>
+    <meta
+      name="description"
+      content="Результаты поиска по сайту «ТехноИмпериум»"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/search.css" />
+    
+    <!-- Стили для загрузчика компонентов -->
+    <style>
+      /* Стили для индикатора загрузки */
+      .components-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Скрываем контент до загрузки компонентов */
+      .main-content {
+        display: none;
+      }
+      
+      .components-loaded .main-content {
+        display: block;
+      }
+      
+      /* Убираем индикатор загрузки после загрузки компонентов */
+      .components-loaded .components-loading {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="page page--search">
+    <!-- Индикатор загрузки компонентов -->
+    <div class="components-loading">
+      <div class="loading-spinner"></div>
+      <p>Загрузка сайта...</p>
+    </div>
+    
+    <!-- Основной контейнер для динамической загрузки компонентов -->
+    <div class="page__wrapper main-content">
+      <!-- Шапка будет вставлена здесь автоматически -->
+      
+      <!-- Хлебные крошки -->
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__current">Результаты поиска</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Основной контент -->
+      <main class="main">
+        <section class="search-page">
+          <div class="search-page__container container">
+            <h1 class="search-page__title">Поиск по сайту</h1>
+            
+            <!-- Форма поиска -->
+            <div class="search-form-wrapper">
+              <form class="search-page__form" id="search-form">
+                <div class="search-page__field">
+                  <input 
+                    type="text" 
+                    class="search-page__input" 
+                    id="search-query"
+                    placeholder="Введите поисковый запрос..."
+                    value=""
+                    required
+                  />
+                  <button type="submit" class="search-page__button button">
+                    Найти
+                  </button>
+                </div>
+              </form>
+            </div>
+            
+            <!-- Индикатор загрузки -->
+            <div class="search-loading" id="search-loading" style="display: none;">
+              <div class="loading-spinner"></div>
+              <p>Идет поиск...</p>
+            </div>
+            
+            <!-- Результаты поиска -->
+            <div class="search-results" id="search-results">
+              <div class="search-results__header">
+                <h2 class="search-results__title">Результаты поиска</h2>
+                <div class="search-results__info" id="search-info">
+                  Введите поисковый запрос
+                </div>
+              </div>
+              
+              <div class="search-results__list" id="search-list">
+                <!-- Результаты будут загружены здесь -->
+              </div>
+              
+              <!-- Пустой результат -->
+              <div class="search-empty" id="search-empty" style="display: none;">
+                <p class="search-empty__text">По вашему запросу ничего не найдено</p>
+                <p class="search-empty__suggestion">
+                  Попробуйте изменить запрос или использовать другие ключевые слова
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <!-- Подвал будет вставлен здесь автоматически -->
+    </div>
+
+    <!-- Модальное окно обратного звонка -->
+    <div class="modal" id="callback">
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <div class="modal__content">
+          <button class="modal__close" aria-label="Закрыть окно">×</button>
+
+          <div class="callback-form">
+            <h3 class="callback-form__title">Заказать обратный звонок</h3>
+            <p class="callback-form__description">
+              Введите номер телефона и мы Вам перезвоним в ближайшее время
+            </p>
+
+            <form class="callback-form__form">
+              <div class="callback-form__field">
+                <label class="callback-form__label"
+                  >Телефон<span>*</span></label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  class="callback-form__input"
+                  required
+                  placeholder="+7 (___) ___-__-__"
+                />
+              </div>
+
+              <button type="submit" class="callback-form__button button">
+                Жду звонка
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скрипты -->
+    <!-- Загрузчик компонентов (подключите этот скрипт первым) -->
+    <script src="js/components-loader.js"></script>
+    
+    <!-- Основной скрипт страницы -->
+    <script src="js/main.js" defer></script>
+    
+    <!-- Скрипт для поиска -->
+    <script src="js/search-engine.js" defer></script>
+    
+    <!-- Скрипт для инициализации загрузки компонентов -->
+    <script>
+      // Инициализация загрузки компонентов
+      document.addEventListener('DOMContentLoaded', function() {
+        // Создаем экземпляр загрузчика
+        const loader = new ComponentsLoader();
+        
+        // Загружаем все компоненты
+        loader.loadAllComponents().then(() => {
+          // После загрузки всех компонентов показываем основной контент
+          document.body.classList.add('components-loaded');
+          
+          // Создаем событие о завершении загрузки компонентов
+          const event = new CustomEvent('componentsLoaded');
+          document.dispatchEvent(event);
+          
+          // Получаем поисковый запрос из URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const query = urlParams.get('s');
+          if (query) {
+            document.getElementById('search-query').value = query;
+            // Запускаем поиск
+            setTimeout(() => {
+              performSearch(query);
+            }, 100);
+          }
+        }).catch(error => {
+          console.error('Ошибка загрузки компонентов:', error);
+          document.body.classList.add('components-loaded');
+        });
+      });
+      
+      // Обработчик формы поиска
+      document.addEventListener('componentsLoaded', function() {
+        const searchForm = document.getElementById('search-form');
+        const searchInput = document.getElementById('search-query');
+        
+        if (searchForm) {
+          searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = searchInput.value.trim();
+            if (query) {
+              performSearch(query);
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
