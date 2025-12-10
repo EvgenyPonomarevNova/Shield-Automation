@@ -18,7 +18,7 @@
 
     <!-- Основные стили -->
     <link rel="stylesheet" href="./css/style.css" />
-    
+
     <!-- Стили для загрузчика компонентов -->
     <style>
       /* Стили для индикатора загрузки */
@@ -30,7 +30,7 @@
         min-height: 100vh;
         text-align: center;
       }
-      
+
       .loading-spinner {
         width: 50px;
         height: 50px;
@@ -40,21 +40,25 @@
         animation: spin 1s linear infinite;
         margin-bottom: 20px;
       }
-      
+
       @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
-      
+
       /* Скрываем контент до загрузки компонентов */
       .main-content {
         display: none;
       }
-      
+
       .components-loaded .main-content {
         display: block;
       }
-      
+
       /* Убираем индикатор загрузки после загрузки компонентов */
       .components-loaded .components-loading {
         display: none;
@@ -68,11 +72,11 @@
       <div class="loading-spinner"></div>
       <p>Загрузка сайта...</p>
     </div>
-    
+
     <!-- Основной контейнер для динамической загрузки компонентов -->
     <div class="page__wrapper main-content">
       <!-- Шапка будет вставлена здесь автоматически -->
-      
+
       <!-- Основной контент -->
       <main class="main">
         <!-- Баннеры -->
@@ -81,10 +85,7 @@
             <div class="banners__grid">
               <!-- Баннер 1: Котельные -->
               <div class="banners__item banners__item--small">
-                <a
-                  href="./catalog.html#kotelnye"
-                  class="banner"
-                >
+                <a href="./catalog.html#kotelnye" class="banner">
                   <div
                     class="banner__image"
                     style="background-image: url(./images/electro66.jpg)"
@@ -98,10 +99,7 @@
 
               <!-- Баннер 2: Восстановление -->
               <div class="banners__item banners__item--large">
-                <a
-                  href="./catalog.html#vosstanovlenie"
-                  class="banner"
-                >
+                <a href="./catalog.html#vosstanovlenie" class="banner">
                   <div
                     class="banner__image"
                     style="background-image: url(./images/sdv43.png)"
@@ -125,10 +123,7 @@
             <div class="banners__grid">
               <!-- Баннер 3: Автоматизация котельных -->
               <div class="banners__item banners__item--large">
-                <a
-                  href="./catalog.html#kotelnye"
-                  class="banner"
-                >
+                <a href="./catalog.html#kotelnye" class="banner">
                   <div
                     class="banner__image"
                     style="background-image: url(./images/dfgeewr.jpg)"
@@ -142,10 +137,7 @@
 
               <!-- Баннер 4: Разработка, монтаж -->
               <div class="banners__item banners__item--small">
-                <a
-                  href="./catalog.html#kotelnye"
-                  class="banner"
-                >
+                <a href="./catalog.html#kotelnye" class="banner">
                   <div
                     class="banner__image"
                     style="background-image: url(./images/dfsadf.jpg)"
@@ -168,10 +160,7 @@
             <div class="banners__grid banners__grid--three">
               <!-- Баннер 5: ИТП -->
               <div class="banners__item">
-                <a
-                  href="./catalog.html#itp"
-                  class="banner"
-                >
+                <a href="./catalog.html#itp" class="banner">
                   <div
                     class="banner__image"
                     style="background-image: url(./images/2.jpg)"
@@ -187,13 +176,12 @@
 
               <!-- Баннер 6: Вентиляция -->
               <div class="banners__item">
-                <a
-                  href="./catalog.html#ventilyatsiya"
-                  class="banner"
-                >
+                <a href="./catalog.html#ventilyatsiya" class="banner">
                   <div
                     class="banner__image"
-                    style="background-image: url(./images/Snimok-ekrana-2020-11-25-v-15.47.27.jpg)"
+                    style="
+                      background-image: url(./images/Snimok-ekrana-2020-11-25-v-15.47.27.jpg);
+                    "
                   ></div>
                   <div class="banner__content">
                     <h3 class="banner__title">Решаем задачи любой сложности</h3>
@@ -283,7 +271,7 @@
           </div>
         </section>
       </main>
-      
+
       <!-- Подвал будет вставлен здесь автоматически -->
     </div>
 
@@ -326,33 +314,34 @@
     <!-- Скрипты -->
     <!-- Загрузчик компонентов (подключите этот скрипт первым) -->
     <script src="js/components-loader.js"></script>
-    
+
     <!-- Основной скрипт страницы -->
     <script src="js/main.js" defer></script>
+    <script src="js/gallery-generator.js" defer></script>
 
-    <script src="js/catalog-images.js"></script>
-<script src="js/gallery-generator.js" defer></script>
-    
     <!-- Скрипт для инициализации загрузки компонентов -->
     <script>
       // Инициализация загрузки компонентов
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         // Создаем экземпляр загрузчика
         const loader = new ComponentsLoader();
-        
+
         // Загружаем все компоненты
-        loader.loadAllComponents().then(() => {
-          // После загрузки всех компонентов показываем основной контент
-          document.body.classList.add('components-loaded');
-          
-          // Создаем событие о завершении загрузки компонентов
-          const event = new CustomEvent('componentsLoaded');
-          document.dispatchEvent(event);
-        }).catch(error => {
-          console.error('Ошибка загрузки компонентов:', error);
-          // В случае ошибки все равно показываем контент
-          document.body.classList.add('components-loaded');
-        });
+        loader
+          .loadAllComponents()
+          .then(() => {
+            // После загрузки всех компонентов показываем основной контент
+            document.body.classList.add("components-loaded");
+
+            // Создаем событие о завершении загрузки компонентов
+            const event = new CustomEvent("componentsLoaded");
+            document.dispatchEvent(event);
+          })
+          .catch((error) => {
+            console.error("Ошибка загрузки компонентов:", error);
+            // В случае ошибки все равно показываем контент
+            document.body.classList.add("components-loaded");
+          });
       });
     </script>
   </body>
