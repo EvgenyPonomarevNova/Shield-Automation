@@ -6,8 +6,8 @@
 class ComponentsLoader {
   constructor() {
     this.components = {
-      header: '/header.html',
-      footer: '/footer.html'
+      header: './header.html',
+      footer: './footer.html'
     };
     this.loadedComponents = 0;
     this.totalComponents = 2;
