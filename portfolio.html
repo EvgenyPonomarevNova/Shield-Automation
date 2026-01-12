@@ -1,1162 +1,146 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Наши работы - «ТехноИмпериум»</title>
-    <meta
-      name="description"
-      content="Наши работы по автоматизации котельных, щитам автоматики, КИПиА. Разработка, монтаж, наладка, сервис."
-    />
-
-    <!-- Favicon -->
-    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
-
-    <!-- Основные стили -->
-    <link rel="stylesheet" href="./css/style.css" />
-    
-    <!-- Стили для страницы портфолио -->
-    <link rel="stylesheet" href="./css/portfolio.css" />
-    
-    <!-- Стили для загрузчика компонентов -->
-    <style>
-      /* Стили для индикатора загрузки */
-      .components-loading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        text-align: center;
-      }
-      
-      .loading-spinner {
-        width: 50px;
-        height: 50px;
-        border: 5px solid #f3f3f3;
-        border-top: 5px solid #3498db;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-bottom: 20px;
-      }
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      
-      /* Скрываем контент до загрузки компонентов */
-      .main-content {
-        display: none;
-      }
-      
-      .components-loaded .main-content {
-        display: block;
-      }
-      
-      /* Убираем индикатор загрузки после загрузки компонентов */
-      .components-loaded .components-loading {
-        display: none;
-      }
-    </style>
-  </head>
-
-  <body class="page page--portfolio">
-    <!-- Индикатор загрузки компонентов -->
-    <div class="components-loading">
-      <div class="loading-spinner"></div>
-      <p>Загрузка сайта...</p>
-    </div>
-    
-    <!-- Основной контейнер для динамической загрузки компонентов -->
-    <div class="page__wrapper main-content">
-      <!-- Шапка будет вставлена здесь автоматически -->
-      
-      <!-- Хлебные крошки -->
-      <div class="breadcrumbs">
-        <div class="breadcrumbs__container container">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a href="/" class="breadcrumbs__link">Главная</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <span class="breadcrumbs__current">Наши работы</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Основной контент -->
-      <main class="main">
-        <section class="portfolio-page">
-          <div class="portfolio-page__container container">
-            <h1 class="portfolio-page__title">Наши работы</h1>
-            
-            <!-- Фильтр категорий -->
-            <div class="portfolio-filter">
-              <ul class="portfolio-filter__list">
-                <li class="portfolio-filter__item portfolio-filter__item--active" data-filter="all">
-                  <button type="button" class="portfolio-filter__button">Все</button>
-                </li>
-                <li class="portfolio-filter__item" data-filter="category-4">
-                  <button type="button" class="portfolio-filter__button">Ремонт и модернизация щитов автоматизации</button>
-                </li>
-                <li class="portfolio-filter__item" data-filter="category-2">
-                  <button type="button" class="portfolio-filter__button">Щиты автоматизации насосов</button>
-                </li>
-                <li class="portfolio-filter__item" data-filter="category-3">
-                  <button type="button" class="portfolio-filter__button">Щиты автоматизации котлов и котельных</button>
-                </li>
-                <li class="portfolio-filter__item" data-filter="category-1">
-                  <button type="button" class="portfolio-filter__button">Техническое обслуживание КИПиА</button>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Галерея работ -->
-            <div class="portfolio-gallery">
-              <div class="portfolio-gallery__grid">
-                
-                <!-- Работы категории 4: Ремонт и модернизация щитов автоматизации -->
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/1.jpg" alt="Щит автоматизации для управления лебёдкой маневровой ЛМ 140">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации для управления лебёдкой маневровой ЛМ 140</h3>
-                    <p class="portfolio-item__description">
-                      Разработан и запущен в производство щит автоматизации для управления лебёдкой маневровой ЛМ 140, 
-                      предназначенной для подтягивания железнодорожных полувагонов грузоподъёмностью 63-125 тонн.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/2.jpg" alt="Щит автоматизации для управления лебёдкой маневровой ЛМ 140 (вид 2)">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации для лебёдки маневровой ЛМ 140</h3>
-                    <p class="portfolio-item__description">
-                      Разработчик и производитель – ООО "Щит-Автоматика". Предназначен для горнодобывающей промышленности при проходке, углубке и армировании вертикальных стволов шахт.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Работы категории 2: Щиты автоматизации насосов -->
-                <div class="portfolio-item" data-category="category-2">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/3.jpg" alt="Щит автоматики для насосов с регулятором уровня Elhart ELV1-D2">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматики для насосов с регулятором уровня Elhart ELV1-D2</h3>
-                    <p class="portfolio-item__description">
-                      ООО "Щит-Автоматика" разработало щит автоматики для насосов с применением регулятора уровня Elhart ELV1-D2.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Работы категории 3: Щиты автоматизации котлов и котельных -->
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/4.jpg" alt="Щит автоматизации котельной для погодозависимого управления">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации котельной ЩА-000004.2</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации котельной для погодозависимого управления котельными с котлами RS.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/5.jpg" alt="Щит автоматизации котельной (вид 2)">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации котельной - вид 2</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации котельной ЩА-000004.2 для погодозависимого управления котельными с котлами RS.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/6.jpg" alt="Щит автоматизации котельной (вид 3)">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации котельной - вид 3</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации котельной ЩА-000004.2 для погодозависимого управления.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Работы категории 1: Техническое обслуживание КИПиА -->
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/7.jpg" alt="Техническое обслуживание КИПиА газогорелочного оборудования">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание КИПиА газогорелочного оборудования</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание КИПиА газогорелочного оборудования на асфальтосмесительной установке ПМ-80. Лаишевский район РТ.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/8.jpg" alt="Техническое обслуживание КИПиА на асфальтосмесительной установке">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание КИПиА на асфальтосмесительной установке</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание КИПиА газогорелочного оборудования на асфальтосмесительной установке "Teltomat". РТ, Лаишевский район.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/9.jpg" alt="Пусконаладочные работы по КИПиА парогенератора">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Пусконаладочные работы по КИПиА парогенератора</h3>
-                    <p class="portfolio-item__description">
-                      Пусконаладочные работы по КИПиА парогенератора. РТ, сп Пестрецы.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/4.jpg" alt="Техническое обслуживание КИПиА котельной с паровыми котлами">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание КИПиА котельной с паровыми котлами</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание КИПиА котельной с паровыми котлами. РТ, г. Буинск.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/5.jpg" alt="Техническое обслуживание КИПиА котельной с водогрейными котлами">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание КИПиА котельной с водогрейными котлами</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание КИПиА котельной с водогрейными котлами. РТ, г. Буинск.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/6.jpg" alt="Монтаж и пусконаладка КИПиА в котельной">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА в котельной</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА, электромонтаж в котельной суммарной мощностью 1,5 МВт. Техническое обслуживание КИПиА. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/13.jpg" alt="Монтаж и пусконаладка КИПиА теплогенераторной">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА теплогенераторной</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА теплогенераторной с воздухонагревателями на природном газе. Техническое обслуживание КИПиА. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/8.jpg" alt="Монтаж и пусконаладка КИПиА котельной 2 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной 2 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной суммарной мощностью 2 МВт на природном газе. Техническое обслуживание КИПиА. РТ, г. Зеленодольск.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/15.jpg" alt="Техническое обслуживание рекуперативного воздухонагревателя">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание рекуперативного воздухонагревателя</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание рекуперативного воздухонагревателя на природном газе. РТ, г. Лаишево.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/9.jpg" alt="Монтаж и пусконаладка КИПиА крышной котельной">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА крышной котельной</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА крышной котельной суммарной мощностью 0,2 МВт на природном газе. РТ, г. Казань, Оренбургский тракт.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/12.jpg" alt="Пусконаладочные работы котельной 7,5 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Пусконаладочные работы котельной 7,5 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Пусконаладочные работы котельной мощностью 7,5 МВт. РТ, г. Набережные Челны, Промзона, Индустриальный парк "КИП-Мастер".
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/10.jpg" alt="Монтаж и пусконаладка КИПиА котельной 0,25 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной 0,25 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной суммарной мощностью 0,25 МВт на природном газе. Техническое обслуживание КИПиА. РТ, г. Лаишево.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/13.jpg" alt="Техническое обслуживание КИПиА котельной 1 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание КИПиА котельной 1 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание КИПиА. Котельная мощностью 1 МВт. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/20.jpg" alt="Пусконаладка КИПиА на объекте с печами">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Пусконаладка КИПиА на объекте с печами</h3>
-                    <p class="portfolio-item__description">
-                      Пусконаладка КИПиА на объекте с печами для сжигания органических отходов и водогрейными настенными отопительными котлами. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/14.jpg" alt="Пусконаладка крышной котельной 2,2 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Пусконаладка крышной котельной 2,2 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Пусконаладка крышной котельной суммарной мощностью 2,2 МВт на природном газе. РТ, г. Казань, Оренбургский тракт.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/18.jpg" alt="Техническое обслуживание КИПиА котельной 154 кВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание КИПиА котельной 154 кВт</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание КИПиА котельной с водогрейным котлом мощностью 154 кВт. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/17.jpg" alt="Монтаж и пусконаладка КИПиА котельной 355 кВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной 355 кВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной суммарной мощностью 355 кВт на природном газе. РТ, Лаишевский район, сп Усады.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/19.jpg" alt="Техническое обслуживание КИПиА котельной 300 кВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание КИПиА котельной 300 кВт</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание КИПиА котельной с водогрейными котлами мощностью 300 кВт. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/16.jpg" alt="Монтаж и пусконаладка КИПиА котельной 1,2 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной 1,2 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной суммарной мощностью 1,2 МВт на природном газе. Техническое обслуживание КИПиА. РТ, г. Зеленодольск.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/26.jpg" alt="Пусконаладочные работы станции водозабора">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Пусконаладочные работы станции водозабора</h3>
-                    <p class="portfolio-item__description">
-                      Пусконаладочные работы станции водозабора. РТ, сп Рыбная Слобода.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/27.jpg" alt="Техническое обслуживание воздухонагревателей">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание воздухонагревателей</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание воздухонагревателей на природном газе. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/23.jpg" alt="Монтаж и пусконаладка КИПиА котельной 0,5 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной 0,5 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной суммарной мощностью 0,5 МВт на природном газе. Техническое обслуживание КИПиА. РТ, Лаишевский район, сп Пелёво.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/24.jpg" alt="Монтаж и пусконаладка КИПиА котельной 0,4 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной 0,4 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной суммарной мощностью 0,4 МВт на природном газе. РТ, Лаишевский район, сп Петровское.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/22.jpg" alt="Монтаж и пусконаладка КИПиА котельной 2,4 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной 2,4 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной суммарной мощностью 2,4 МВт на природном газе. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/25.jpg" alt="Техническое обслуживание КИПиА котельной 200 кВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание КИПиА котельной 200 кВт</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание КИПиА котельной мощностью 200 кВт. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/32.jpg" alt="Разработка и изготовление щита автоматики с диспетчеризацией">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Разработка и изготовление щита автоматики с диспетчеризацией</h3>
-                    <p class="portfolio-item__description">
-                      Разработка и изготовление щита автоматики (с диспетчеризацией) для котла RS уличного размещения. Монтаж и пусконаладка в комплексе со всей установкой. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/28.jpg" alt="Монтаж и пусконаладка КИПиА крышной котельной 2 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА крышной котельной 2 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА крышной котельной суммарной мощностью 2 МВт на природном газе. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/29.jpg" alt="Монтаж и пусконаладка КИПиА котельной 0,2 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной 0,2 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной, 0,2 МВт. РТ, Рыбнослободской район, сп Рыбная Слобода.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/33.jpg" alt="Монтаж и пусконаладка КИПиА котельной">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/43.jpg" alt="Монтаж и пусконаладка КИПиА котельной 0,2 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной 0,2 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной суммарной мощностью 0,2 МВт на природном газе. РТ, Пестречинский район, сп Кулаево.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/38.jpg" alt="Пусконаладочные работы по газогорелочному оборудованию">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Пусконаладочные работы по газогорелочному оборудованию</h3>
-                    <p class="portfolio-item__description">
-                      Пусконаладочные работы по газогорелочному оборудованию на технологической линии окраски/сушки металлоизделий. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/31.jpg" alt="Монтаж и пусконаладка КИПиА водогрейной котельной 3 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА водогрейной котельной 3 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА водогрейной котельной, 3 МВт. РТ, г. Альметьевск.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/32.jpg" alt="Пусконаладочные работы в отопительно-производственной котельной">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Пусконаладочные работы в отопительно-производственной котельной</h3>
-                    <p class="portfolio-item__description">
-                      Пусконаладочные работы в отопительно-производственной котельной с водогрейными и паровыми котлами, мощность на отопление – 2 МВт, на производство – 2 т/ч. РТ, г. Буинск.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/34.jpg" alt="Монтаж и пусконаладка КИПиА крышной котельной 0,6 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА крышной котельной 0,6 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА крышной котельной суммарной мощностью 0,6 МВт. Техническое обслуживание КИПиА. РТ, Лаишевский район, сп Боровое Матюшино.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/36.jpg" alt="Автоматизация частной котельной по индивидуальному проекту">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Автоматизация частной котельной по индивидуальному проекту</h3>
-                    <p class="portfolio-item__description">
-                      Автоматизация частной котельной по индивидуальному проекту. РТ, Лаишевский район, сп Тарлаши.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/33.jpg" alt="Монтаж и пусконаладка КИПиА котельной">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и пусконаладка КИПиА котельной</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и пусконаладка КИПиА котельной. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/44.jpg" alt="Монтаж системы автоматического контроля загазованности">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж системы автоматического контроля загазованности</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж системы автоматического контроля загазованности в многоквартирном жилом доме. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/45.jpg" alt="Пусконаладка котла на диатермическом масле">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Пусконаладка котла на диатермическом масле</h3>
-                    <p class="portfolio-item__description">
-                      Пусконаладка котла на диатермическом масле. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/41.jpg" alt="Монтаж и наладка КИПиА отопительной водогрейной котельной 0,5 МВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и наладка КИПиА отопительной водогрейной котельной 0,5 МВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и наладка КИПиА отопительной водогрейной котельной, 0,5 МВт. РТ, Лаишевский район, сп Ильинка.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/42.jpg" alt="Монтажные и пусконаладочные работы КИПиА котельной 600 кВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтажные и пусконаладочные работы КИПиА котельной 600 кВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтажные и пусконаладочные работы КИПиА котельной мощностью 600 кВт с водогрейными котлами Viessmann. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/39.jpg" alt="Техническое обслуживание КИПиА отопительно-производственной котельной">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Техническое обслуживание КИПиА отопительно-производственной котельной</h3>
-                    <p class="portfolio-item__description">
-                      Техническое обслуживание КИПиА отопительно-производственной котельной с котлами ДКВР. РТ, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/43.jpg" alt="Монтаж и наладка КИПиА. Котельная 200 кВт">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Монтаж и наладка КИПиА. Котельная 200 кВт</h3>
-                    <p class="portfolio-item__description">
-                      Монтаж и наладка КИПиА. Котельная, 200 кВт, водогрейные котлы Protherm. РТ, г. Набережные Челны.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-1">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/44.jpg" alt="Автоматизация частной котельной">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Автоматизация частной котельной</h3>
-                    <p class="portfolio-item__description">
-                      Автоматизация частной котельной. РТ, Лаишевский район, сп Усады.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Дополнительные работы категории 2: Щиты автоматизации насосов -->
-                <div class="portfolio-item" data-category="category-2">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/2.jpg" alt="Щит автоматизации насосов ЩА-000008.х и ВРУ">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации насосов ЩА-000008.х и ВРУ</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации насосов ЩА-000008.х и ВРУ, Марий-Эл, нп Юбилейный.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-2">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/3.jpg" alt="Щиты автоматизации насосов ЩА-000008.3 и ЩА-000008.5">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щиты автоматизации насосов ЩА-000008.3 и ЩА-000008.5</h3>
-                    <p class="portfolio-item__description">
-                      Щиты автоматизации насосов ЩА-000008.3 и ЩА-000008.5, котельная, г. Казань, ул. Дубравная, 2017 г.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-2">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/1.jpg" alt="Щиты автоматизации насосов ЩА-000008.х">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щиты автоматизации насосов ЩА-000008.х</h3>
-                    <p class="portfolio-item__description">
-                      Щиты автоматизации насосов ЩА-000008.х, нп Юбилейный.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-2">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/54.jpg" alt="Щиты автоматизации насосов ЩА-000008.х, Казань">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щиты автоматизации насосов ЩА-000008.х, Казань</h3>
-                    <p class="portfolio-item__description">
-                      Щиты автоматизации насосов ЩА-000008.х, Татарстан, г. Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Дополнительные работы категории 3: Щиты автоматизации котлов и котельных -->
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/4.jpg" alt="Щит автоматизации котла для котла RS-D">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации котла для котла RS-D</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации котла ЩА-000007 для котла RS-D, Лаишевский район РТ, 2017 г.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/5.jpg" alt="Ремонт блока БУРС-1 на паровом котле ДЕ-1/9">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Ремонт блока БУРС-1 на паровом котле ДЕ-1/9</h3>
-                    <p class="portfolio-item__description">
-                      Ремонт блока БУРС-1 и замена блока коммутационных элементов на паровом котле ДЕ-1/9, Буинский район РТ, 2017 г.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/7.jpg" alt="Модернизация щита автоматизации блочно-модульной котельной">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита автоматизации блочно-модульной котельной</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита автоматизации блочно-модульной котельной, Татарстан, нп Киндери.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/6.jpg" alt="Модернизация щита автоматизации блочно-модульной котельной 2">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита автоматизации блочно-модульной котельной 2</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита автоматизации блочно-модульной котельной, Татарстан, нп Киндери.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/11.jpg" alt="Модернизация щита автоматизации котла КВС-1">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита автоматизации котла КВС-1</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита автоматизации котла КВС-1, Чувашия, Чебоксары.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/9.jpg" alt="Модернизация щита автоматизации котла КВС-1 2">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита автоматизации котла КВС-1 2</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита автоматизации котла КВС-1, Чувашия, Чебоксары.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/10.jpg" alt="Модернизация щита автоматизации котла КВС-1 3">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита автоматизации котла КВС-1 3</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита автоматизации котла КВС-1, Чувашия, Чебоксары.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/8.jpg" alt="Модернизация щита автоматизации котла КВС-1 4">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита автоматизации котла КВС-1 4</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита автоматизации котла КВС-1, Чувашия, Чебоксары.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/12.jpg" alt="Модернизация щита автоматизации котла КВС-1 5">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита автоматизации котла КВС-1 5</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита автоматизации котла КВС-1, Чувашия, Чебоксары.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/44.jpg" alt="Щит автоматизации котельной ЩА-000006.х">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации котельной ЩА-000006.х</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации котельной ЩА-000006.х, Татарстан, Лаишевский район.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/17.jpg" alt="Щит автоматизации котельной ЩА-000006.х 2">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации котельной ЩА-000006.х 2</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации котельной ЩА-000006.х, Татарстан, Лаишевский район.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/15.jpg" alt="Щит автоматизации паровой котельной ЩА-0000021">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации паровой котельной ЩА-0000021</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации паровой котельной ЩА-0000021, Марий-Эл, нп Юбилейный.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/19.jpg" alt="Щит автоматизации теплогенератора ЩА-000018">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации теплогенератора ЩА-000018</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации теплогенератора ЩА-000018, Татарстан, Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-3">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/13.jpg" alt="Щит автоматизации теплогенератора ЩА-000018 2">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации теплогенератора ЩА-000018 2</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации теплогенератора ЩА-000018, Татарстан, Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Дополнительные работы категории 4: Ремонт и модернизация щитов автоматизации -->
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/69.jpg" alt="Модернизация автоматики гильотины">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация автоматики гильотины</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация автоматики гильотины, Марий-Эл, Йошкар-Ола.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/6.jpg" alt="Восстановление работоспособности щита автоматизации">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Восстановление работоспособности щита автоматизации</h3>
-                    <p class="portfolio-item__description">
-                      Восстановление работоспособности щита автоматизации блочно-модульной котельной, нп Киндери Высокогорский район РТ, 2017 г.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/18.jpg" alt="Модернизация автоматики гильотины 3">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация автоматики гильотины 3</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация автоматики гильотины, Марий-Эл, Йошкар-Ола.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/work/73.jpg" alt="Модернизация автоматики гильотины 4">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация автоматики гильотины 4</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация автоматики гильотины, Марий-Эл, Йошкар-Ола.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/22.jpg" alt="Модернизация автоматики гильотины 5">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация автоматики гильотины 5</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация автоматики гильотины, Марий-Эл, Йошкар-Ола.
-                    </p>
-                  </div>
-                </div>
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/21.jpg" alt="Модернизация щита управления прессом">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита управления прессом</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита управления прессом, Марий-Эл, Йошкар-Ола.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/26.jpg" alt="Модернизация щита управления прессом 2">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита управления прессом 2</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита управления прессом, Марий-Эл, Йошкар-Ола.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/23.jpg" alt="Модернизация щита управления прессом 3">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Модернизация щита управления прессом 3</h3>
-                    <p class="portfolio-item__description">
-                      Модернизация щита управления прессом, Марий-Эл, Йошкар-Ола.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/24.jpg" alt="Щит автоматизации ИТП ЩА-000014.х">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации ИТП ЩА-000014.х</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации ИТП ЩА-000014.х, Татарстан, Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/28.jpg" alt="Щит автоматизации ИТП ЩА-000014.х 2">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации ИТП ЩА-000014.х 2</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации ИТП ЩА-000014.х, Татарстан, Казань.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/25.jpg" alt="Щит автоматизации овощехранилища ЩА-000023">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации овощехранилища ЩА-000023</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации овощехранилища ЩА-000023, Татарстан, Бирюли.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="portfolio-item" data-category="category-4">
-                  <div class="portfolio-item__image">
-                    <img src="./images/portfolio/Autoshields/27.jpg" alt="Щит автоматизации овощехранилища ЩА-000023 2">
-                  </div>
-                  <div class="portfolio-item__content">
-                    <h3 class="portfolio-item__title">Щит автоматизации овощехранилища ЩА-000023 2</h3>
-                    <p class="portfolio-item__description">
-                      Щит автоматизации овощехранилища ЩА-000023, Татарстан, Бирюли.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Сообщение, если ничего не найдено -->
-            <div class="portfolio-empty" style="display: none;">
-              <div class="portfolio-empty__content">
-                <p class="portfolio-empty__text">Работы по выбранной категории не найдены</p>
-                <button type="button" class="portfolio-empty__button" data-filter="all">Показать все работы</button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <!-- Подвал будет вставлен здесь автоматически -->
-    </div>
-
-    <!-- Модальное окно обратного звонка -->
-    <div class="modal" id="callback">
-      <div class="modal__overlay"></div>
-      <div class="modal__container">
-        <div class="modal__content">
-          <button class="modal__close" aria-label="Закрыть окно">×</button>
-
-          <div class="callback-form">
-            <h3 class="callback-form__title">Заказать обратный звонок</h3>
-            <p class="callback-form__description">
-              Введите номер телефона и мы Вам перезвоним в ближайшее время
-            </p>
-
-            <form class="callback-form__form">
-              <div class="callback-form__field">
-                <label class="callback-form__label"
-                  >Телефон<span>*</span></label
-                >
-                <input
-                  type="tel"
-                  name="phone"
-                  class="callback-form__input"
-                  required
-                  placeholder="+7 (___) ___-__-__"
-                />
-              </div>
-
-              <button type="submit" class="callback-form__button button">
-                Жду звонка
-              </button>
-            </form>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Наши работы по автоматизации - Портфолио «ТехноИмпериум»</title>
+  <meta name="description" content="Портфолио выполненных работ по автоматизации котельных, щитам автоматики, КИПиА. Реальные примеры наших проектов." />
+  <meta name="keywords" content="портфолио автоматизации, выполненные проекты щитов автоматики, примеры работ котельных" />
+  <script src="js/seo-optimizer.js" defer></script>
+  <link rel="canonical" href="https://technoimperium.ru/portfolio.html" />
+  
+  <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/portfolio.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Портфолио работ ТехноИмпериум",
+    "description": "Примеры выполненных проектов по автоматизации",
+    "about": {
+      "@type": "Service",
+      "name": "Автоматизация промышленных объектов"
+    }
+  }
+  </script>
+  
+  <style>
+    .components-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .main-content { display: none; }
+    .components-loaded .main-content { display: block; }
+    .components-loaded .components-loading { display: none; }
+  </style>
+</head>
+
+<body class="page page--portfolio">
+  <div class="components-loading">
+    <div class="loading-spinner"></div>
+    <p>Загрузка сайта...</p>
+  </div>
+  
+  <div class="page__wrapper main-content">
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__container container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="/" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__current">Наши работы</span>
+          </li>
+        </ul>
       </div>
     </div>
-
-    <!-- Скрипты -->
-    <!-- Загрузчик компонентов (подключите этот скрипт первым) -->
-    <script src="js/components-loader.js"></script>
     
-    <!-- Основной скрипт страницы -->
-    <script src="js/main.js" defer></script>
-    
-    <!-- Скрипт для фильтрации портфолио -->
-    <script src="js/portfolio-filter.js" defer></script>
-    
-    <!-- Скрипт для инициализации загрузки компонентов -->
-    <script>
-      // Инициализация загрузки компонентов
-      document.addEventListener('DOMContentLoaded', function() {
-        // Создаем экземпляр загрузчика
-        const loader = new ComponentsLoader();
-        
-        // Загружаем все компоненты
-        loader.loadAllComponents().then(() => {
-          // После загрузки всех компонентов показываем основной контент
-          document.body.classList.add('components-loaded');
+    <main class="main">
+      <section class="portfolio-page">
+        <div class="portfolio-page__container container">
+          <h1 class="portfolio-page__title">Наши работы по автоматизации</h1>
+          <p class="portfolio-page__subtitle">Реальные примеры выполненных проектов</p>
           
-          // Создаем событие о завершении загрузки компонентов
-          const event = new CustomEvent('componentsLoaded');
-          document.dispatchEvent(event);
-        }).catch(error => {
-          console.error('Ошибка загрузки компонентов:', error);
-          // В случае ошибки все равно показываем контент
-          document.body.classList.add('components-loaded');
-        });
+          <div class="portfolio-filter">
+            <ul class="portfolio-filter__list">
+              <div class="portfolio-filter__list" id="category-filter"></div>
+            </ul>
+          </div>
+          
+          <div class="portfolio-gallery">
+            <div class="portfolio-gallery__grid" id="portfolio-grid"></div>
+          </div>
+          
+          <div class="portfolio-empty" style="display: none">
+            <div class="portfolio-empty__content">
+              <p class="portfolio-empty__text">Работы по выбранной категории не найдены</p>
+              <button type="button" class="portfolio-empty__button" data-filter="all">Показать все работы</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <div class="modal" id="callback">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+      <div class="modal__content">
+        <button class="modal__close" aria-label="Закрыть окно">×</button>
+        <div class="callback-form">
+          <h3 class="callback-form__title">Заказать обратный звонок</h3>
+          <p class="callback-form__description">Введите номер телефона и мы Вам перезвоним в ближайшее время</p>
+          <form class="callback-form__form">
+            <div class="callback-form__field">
+              <label class="callback-form__label">Телефон<span>*</span></label>
+              <input type="tel" name="phone" class="callback-form__input" required placeholder="+7 (___) ___-__-__" />
+            </div>
+            <button type="submit" class="callback-form__button button">Жду звонка</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/components-loader.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/portfolio-filter.js" defer></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const loader = new ComponentsLoader();
+      loader.loadAllComponents().then(() => {
+        document.body.classList.add("components-loaded");
+        document.dispatchEvent(new CustomEvent("componentsLoaded"));
+      }).catch((error) => {
+        console.error("Ошибка загрузки компонентов:", error);
+        document.body.classList.add("components-loaded");
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>

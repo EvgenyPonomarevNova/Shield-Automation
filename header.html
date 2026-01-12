@@ -1,80 +1,57 @@
-<!-- Header Component -->
 <header class="header">
   <div class="header__container container">
-    <!-- Мобильное меню -->
     <button class="header__menu-toggle" type="button" aria-label="Открыть меню">
-      <span class="header__menu-text">Меню</span>
+      <span class="catalog__icon"></span>
     </button>
-
-    <!-- Левая навигация -->
+    
     <nav class="header__nav header__nav--left">
       <div class="catalog">
         <button class="catalog__button" type="button">
           <span class="catalog__icon"></span>
           <span class="catalog__text">Меню</span>
         </button>
-
+        
         <div class="catalog__menu">
           <ul class="catalog__list">
             <li class="catalog__item">
-              <a href="./avtomatizatsiya.html" class="catalog__link"
-                >Автоматизация котельных. Разработка, монтаж, наладка, сервис</a
-              >
+              <a href="./avtomatizatsiya.html" class="catalog__link">Автоматизация котельных. Разработка, монтаж, наладка, сервис</a>
             </li>
             <li class="catalog__item">
-              <a href="./AutomationShields.html" class="catalog__link"
-                >Щиты автоматики. Разработка, монтаж, наладка, сервис</a
-              >
+              <a href="./AutomationShields.html" class="catalog__link">Щиты автоматики. Разработка, монтаж, наладка, сервис</a>
             </li>
             <li class="catalog__item">
-              <a href="./catalog.html" class="catalog__link"
-                >Щиты автоматики. Каталог</a
-              >
+              <a href="./catalog.html" class="catalog__link">Щиты автоматики. Каталог</a>
             </li>
             <li class="catalog__item">
               <a href="./portfolio.html" class="catalog__link">Наши работы</a>
             </li>
             <li class="catalog__item">
-              <a href="./documentation.html" class="catalog__link"
-                >Документация</a
-              >
+              <a href="./documentation.html" class="catalog__link">Документация</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <!-- Логотип -->
-    <a href="/" class="header__logo">
-      <img
-        src="./images/main-logo-min.png"
-        alt="ТехноИмпериум"
-        class="header__logo-img"
-      />
+    
+    <a href="/" class="header__logo" aria-label="ТехноИмпериум - главная страница">
+      <img src="./images/main-logo-min.png" alt="ТехноИмпериум" class="header__logo-img" width="200" height="60" />
     </a>
 
-    <!-- Правая навигация -->
+    <div class="header__link-mob">
+      <a href="" class="header__link-mob-map">г. Казань, ул. Восход 49</a>
+      <a href="tel:+79872156000" class="footer__contact-link">8 (987) 215 6000</a>
+    </div>
+    
     <nav class="header__nav header__nav--right">
       <div class="header__contacts">
-        <a
-          href="mailto:secretariat@technoimperium.ru"
-          class="header__contact header__contact--email"
-        >
-          secretariat@technoimperium.ru
-        </a>
-        <a
-          href="tel:+79872156000"
-          class="header__contact header__contact--phone"
-        >
-          8 (987) 215 6000
-        </a>
+        <a href="mailto:secretariat@technoimperium.ru" class="header__contact header__contact--email">secretariat@technoimperium.ru</a>
+        <a href="tel:+79872156000" class="header__contact header__contact--phone">8 (987) 215 6000</a>
       </div>
-
+      
       <div class="header__links">
         <a href="./about.html" class="header__link">Контакты</a>
       </div>
-
-      <!-- Поиск -->
+      
       <div class="search">
         <button class="search__toggle" type="button" aria-label="Открыть поиск">
           <svg class="search__icon" width="16" height="16" viewBox="0 0 16 16">
@@ -82,35 +59,16 @@
             <line x1="10.9" y1="10.9" x2="15.5" y2="15.5" />
           </svg>
         </button>
-
+        
         <form class="search__form" action="./search.html" method="get">
-          <input
-            type="text"
-            class="search__input"
-            placeholder="Поиск по сайту..."
-            name="s"
-            required
-          />
+          <input type="text" class="search__input" placeholder="Поиск по сайту..." name="s" required />
           <button type="submit" class="search__submit" aria-label="Найти">
-            <svg
-              class="search__icon"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-            >
+            <svg class="search__icon" width="16" height="16" viewBox="0 0 16 16">
               <circle cx="6.2" cy="6.2" r="5.1" />
               <line x1="10.9" y1="10.9" x2="15.5" y2="15.5" />
             </svg>
           </button>
-          <button
-            type="button"
-            class="search__close"
-            aria-label="Закрыть поиск"
-          >
-            <svg width="12" height="12" viewBox="0 0 12 12">
-              <line x1="1" y1="1" x2="11" y2="11" stroke="currentColor" />
-              <line x1="11" y1="1" x2="1" y2="11" stroke="currentColor" />
-            </svg>
+          <button type="button" class="search__close" aria-label="Закрыть поиск2">
           </button>
         </form>
       </div>

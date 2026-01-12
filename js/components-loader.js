@@ -69,9 +69,18 @@ class ComponentsLoader {
               <nav class="main-nav">
                 <a href="/">Главная</a>
                 <a href="catalog.html">Каталог</a>
-                <a href="#contacts">Контакты</a>
+                <a href="documentation.html">Документация</a>
+                <a href="avtomatizatsiya.html">Автоматизация котельных</a>
+                <a href="AutomationShields.html">Щиты автоматизации</a>
+                <a href="about.html">О нас</a>
+                <a href="search.html">Поиск</a>
               </nav>
             </div>
+            <button class="header__menu-toggle" aria-label="Открыть меню">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </header>
       `;
@@ -81,7 +90,13 @@ class ComponentsLoader {
       html = `
         <footer class="footer">
           <div class="footer__container container">
-            <p>© ТехноИмпериум. Все права защищены.</p>
+            <div class="footer__info">
+              <div class="footer__logo">ТехноИмпериум</div>
+              <p>Профессиональная автоматизация котельных</p>
+            </div>
+            <div class="footer__copyright">
+              <p>© ТехноИмпериум. Все права защищены.</p>
+            </div>
           </div>
         </footer>
       `;
@@ -104,6 +119,18 @@ class ComponentsLoader {
   async initHeader() {
     await new Promise(resolve => setTimeout(resolve, 100));
     
+    // 1. Инициализация десктопного меню (выпадающие меню каталога)
+    await this.initDesktopMenu();
+    
+    // 2. Инициализация мобильного меню
+    await this.initMobileMenu();
+    
+    // 3. Инициализация модальных окон в шапке
+    await this.initHeaderModals();
+  }
+
+  async initDesktopMenu() {
+    // Инициализация каталога (если есть выпадающее меню)
     const catalogButton = document.querySelector('.catalog__button');
     const catalogMenu = document.querySelector('.catalog__menu');
     
@@ -122,12 +149,7 @@ class ComponentsLoader {
       });
     }
 
-    await this.initSearch();
-    await this.initMobileMenu();
-    await this.initHeaderModals();
-  }
-
-  async initSearch() {
+    // Инициализация поиска (если есть)
     const searchToggle = document.querySelector('.search__toggle');
     const searchForm = document.querySelector('.search__form');
     const searchClose = document.querySelector('.search__close');
@@ -196,27 +218,7 @@ class ComponentsLoader {
     const mobileMenu = document.createElement('div');
     mobileMenu.className = 'mobile-menu';
     
-    const catalogMenu = document.querySelector('.catalog__menu');
-    if (catalogMenu) {
-      const catalogClone = catalogMenu.cloneNode(true);
-      catalogClone.classList.add('mobile-menu__catalog');
-      mobileMenu.appendChild(catalogClone);
-    }
-    
-    const headerContacts = document.querySelector('.header__contacts');
-    if (headerContacts) {
-      const contactsClone = headerContacts.cloneNode(true);
-      contactsClone.classList.add('mobile-menu__contacts');
-      mobileMenu.appendChild(contactsClone);
-    }
-    
-    const headerLinks = document.querySelector('.header__links');
-    if (headerLinks) {
-      const linksClone = headerLinks.cloneNode(true);
-      linksClone.classList.add('mobile-menu__links');
-      mobileMenu.appendChild(linksClone);
-    }
-    
+    // Кнопка закрытия
     const closeButton = document.createElement('button');
     closeButton.className = 'mobile-menu__close';
     closeButton.innerHTML = '×';
@@ -231,18 +233,55 @@ class ComponentsLoader {
     });
     mobileMenu.appendChild(closeButton);
     
-    document.body.appendChild(mobileMenu);
+    // Контент меню
+    const menuContent = document.createElement('div');
+    menuContent.className = 'mobile-menu__content';
     
-    mobileMenu.addEventListener('click', (e) => {
-      if (e.target === mobileMenu) {
+    // Навигация по пунктам меню
+    const navigationHTML = `
+      <nav class="mobile-menu__nav">
+        <a href="/" class="mobile-menu__link">Главная</a>
+        <a href="avtomatizatsiya.html" class="mobile-menu__link">Автоматизация котельных</a>
+        <a href="AutomationShields.html" class="mobile-menu__link">Щиты автоматизации</a>
+        <a href="catalog.html" class="mobile-menu__link">Каталог</a>
+        <a href="portfolio.html" class="mobile-menu__link">Наши работы</a>
+        <a href="documentation.html" class="mobile-menu__link">Документация</a>
+        <a href="search.html" class="mobile-menu__link">Поиск</a>
+        <a href="about.html" class="mobile-menu__link">Контакты</a>
+      </nav>
+    `;
+    
+    menuContent.innerHTML = navigationHTML;
+    
+    // Добавляем обработчики для ссылок
+    const menuLinks = menuContent.querySelectorAll('.mobile-menu__link');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
         mobileMenu.classList.remove('mobile-menu--open');
         const menuToggle = document.querySelector('.header__menu-toggle');
         if (menuToggle) {
           menuToggle.classList.remove('header__menu-toggle--active');
         }
         document.body.style.overflow = '';
-      }
+      });
     });
+    
+    mobileMenu.appendChild(menuContent);
+    
+    // Оверлей для закрытия
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-menu__overlay';
+    overlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('mobile-menu--open');
+      const menuToggle = document.querySelector('.header__menu-toggle');
+      if (menuToggle) {
+        menuToggle.classList.remove('header__menu-toggle--active');
+      }
+      document.body.style.overflow = '';
+    });
+    
+    document.body.appendChild(mobileMenu);
+    document.body.appendChild(overlay);
   }
 
   async initHeaderModals() {
@@ -282,6 +321,7 @@ class ComponentsLoader {
   }
   
   initAllModals() {
+    // Инициализация всех модальных окон
     const modalButtons = document.querySelectorAll('[data-modal], a[href^="#"]');
     
     modalButtons.forEach(button => {
@@ -301,6 +341,7 @@ class ComponentsLoader {
       }
     });
     
+    // Закрытие модальных окон
     const closeButtons = document.querySelectorAll('.modal__close');
     closeButtons.forEach(button => {
       button.addEventListener('click', () => {
@@ -312,6 +353,7 @@ class ComponentsLoader {
       });
     });
     
+    // Закрытие по клику на оверлей
     const overlays = document.querySelectorAll('.modal__overlay');
     overlays.forEach(overlay => {
       overlay.addEventListener('click', () => {
@@ -321,6 +363,30 @@ class ComponentsLoader {
           document.body.style.overflow = '';
         }
       });
+    });
+    
+    // Закрытие по Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+          if (modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+          }
+        });
+        
+        // Закрытие мобильного меню
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if (mobileMenu && mobileMenu.classList.contains('mobile-menu--open')) {
+          mobileMenu.classList.remove('mobile-menu--open');
+          const menuToggle = document.querySelector('.header__menu-toggle');
+          if (menuToggle) {
+            menuToggle.classList.remove('header__menu-toggle--active');
+          }
+          document.body.style.overflow = '';
+        }
+      }
     });
   }
 

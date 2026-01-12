@@ -1,5 +1,44 @@
 /* portfolio.css */
 /* Стили для страницы портфолио */
+/* ===== ХЛЕБНЫЕ КРОШКИ ===== */
+.crumbs-wrap {
+    padding: 40px 90px 35px;
+}
+
+.breadcrumbs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font: 500 14px "Roboto", sans-serif;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+}
+
+.breadcrumbs li:after {
+    content: ">";
+    font: 500 14px "Roboto Condensed", sans-serif;
+    margin-left: 6px;
+    margin-right: 2px;
+}
+
+.breadcrumbs li:last-child:after {
+    display: none;
+}
+
+.breadcrumbs a {
+    color: #000;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: red;
+}
+
+.breadcrumb_last {
+    color: #7b899a;
+}
 
 .portfolio-page {
   padding: 40px 0 80px;

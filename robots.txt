@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /private/
+Disallow: /tmp/
+
+Sitemap: https://ваш-сайт.ru/sitemap.xml
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Clean-param: ref /category/
+
+# Google
+User-agent: Googlebot
+Allow: /
+Disallow: /search
+
+# Bing
+User-agent: bingbot
+Allow: /
+Crawl-delay: 2

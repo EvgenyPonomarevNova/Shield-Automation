@@ -1,5 +1,44 @@
 /* documentation.css */
 /* Стили для страницы документации */
+/* ===== ХЛЕБНЫЕ КРОШКИ ===== */
+.crumbs-wrap {
+    padding: 40px 90px 35px;
+}
+
+.breadcrumbs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font: 500 14px "Roboto", sans-serif;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+}
+
+.breadcrumbs li:after {
+    content: ">";
+    font: 500 14px "Roboto Condensed", sans-serif;
+    margin-left: 6px;
+    margin-right: 2px;
+}
+
+.breadcrumbs li:last-child:after {
+    display: none;
+}
+
+.breadcrumbs a {
+    color: #000;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: red;
+}
+
+.breadcrumb_last {
+    color: #7b899a;
+}
 
 .documentation-page {
   padding: 40px 0 80px;
@@ -187,3 +226,154 @@
     font-size: 15px;
   }
 }
+
+
+    /* ===== МОДАЛКА ДЛЯ ДОКУМЕНТОВ ===== */
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: lightboxFadeIn 0.3s ease;
+    }
+    
+    .lightbox__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+    }
+    
+    .lightbox__content {
+        position: relative;
+        z-index: 10001;
+        max-width: 90%;
+        max-height: 90%;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .lightbox__close {
+position: absolute;
+    top: 30px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    background: var(--color-accent);
+    border: none;
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: all 0.3s 
+ease;
+    font-weight: bold;
+        z-index: 10002;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+    
+    .lightbox__close:hover {
+        background: #fff;
+        transform: scale(1.1);
+    }
+    
+    .lightbox__img {
+        display: block;
+        max-width: 100%;
+        max-height: 80vh;
+        margin: 0 auto;
+    }
+    
+    .lightbox__title {
+        padding: 20px;
+        text-align: center;
+        background: #fff;
+        font-size: 16px;
+        line-height: 1.4;
+        color: #333;
+        border-top: 1px solid #eee;
+    }
+    
+    @keyframes lightboxFadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* ===== СТИЛИ ДЛЯ ДОКУМЕНТОВ ===== */
+    .documentation-gallery__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .documentation-item {
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        background: #fff;
+        cursor: pointer;
+    }
+    
+    .documentation-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 2px 62px rgba(0, 0, 0, 0.11);
+    }
+    
+    .documentation-item__image {
+        height: 250px;
+        overflow: hidden;
+        background: #f7f6f7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .documentation-item__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 15px;
+        transition: transform 0.5s ease;
+    }
+    
+    .documentation-item:hover .documentation-item__image img {
+        transform: scale(1.05);
+    }
+    
+    .documentation-item__content {
+        padding: 20px;
+        background: #f7f6f7;
+    }
+    
+    .documentation-item__title {
+        font: 400 16px/1.4 "Roboto", sans-serif;
+        color: #000;
+        margin: 0;
+        text-align: center;
+    }

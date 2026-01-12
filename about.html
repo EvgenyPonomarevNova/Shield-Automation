@@ -4,22 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="js/seo-optimizer.js" defer></script>
     <title>О нас - Группа компаний «ТехноИмпериум»</title>
     <meta
       name="description"
       content="Как заказать, доставка и оплата, контакты компании ТехноИмпериум. Автоматизация котельных, щиты управления, КИПиА."
     />
-
-    <!-- Favicon -->
     <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
-
-    <!-- Основные стили -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/avtomatizatsiya.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Стили для загрузчика компонентов -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Документация компании ТехноИмпериум",
+        "description": "Официальные сертификаты и разрешения компании",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ТехноИмпериум",
+          "url": "https://technoimperium.ru"
+        }
+      }
+    </script>
     <style>
-      /* Стили для индикатора загрузки */
       .components-loading {
         display: flex;
         flex-direction: column;
@@ -40,20 +54,20 @@
       }
 
       @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
 
-      /* Скрываем контент до загрузки компонентов */
       .main-content {
         display: none;
       }
-
       .components-loaded .main-content {
         display: block;
       }
-
-      /* Убираем индикатор загрузки после загрузки компонентов */
       .components-loaded .components-loading {
         display: none;
       }
@@ -61,17 +75,11 @@
   </head>
 
   <body class="page">
-    <!-- Индикатор загрузки компонентов -->
     <div class="components-loading">
       <div class="loading-spinner"></div>
       <p>Загрузка сайта...</p>
     </div>
-
-    <!-- Основной контейнер для динамической загрузки компонентов -->
     <div class="page__wrapper main-content">
-      <!-- Шапка будет вставлена здесь автоматически -->
-
-      <!-- Хлебные крошки -->
       <div class="crumbs-wrap hidden-md-down">
         <div class="container-fluid">
           <ol class="breadcrumbs reset-ul">
@@ -79,29 +87,21 @@
               <span>
                 <span>
                   <a href="/">Главная</a> &gt;
-                  <span class="breadcrumb_last" aria-current="page"
-                    >О нас</span
-                  >
+                  <span class="breadcrumb_last" aria-current="page">О нас</span>
                 </span>
               </span>
             </li>
           </ol>
         </div>
       </div>
-
-      <!-- Основной контент -->
       <main class="main">
         <div class="container">
           <div class="row">
             <div class="product-col infotxt">
-              <!-- Заголовок для десктопа (скрыт на мобильных) -->
               <h1 class="product-h1 hidden-md-down">
                 О нас: Как заказать, доставка и оплата, контакты
               </h1>
-
-              <!-- Контент страницы -->
               <div class="services-content">
-                <!-- Секция 1: Как заказать -->
                 <h4>Как заказать</h4>
 
                 <div class="services-content__layout">
@@ -120,34 +120,48 @@
                     <div class="services-content__inner">
                       <p>Будем рады видеть Вас с 9:00-18:00 по адресу:</p>
                       <p class="address-highlight">
-                        <strong>Россия, РТ, г. Казань, ул. Тэцевская, д. 11</strong>
+                        <strong
+                          >Россия, РТ, г. Казань, ул. Восход, д. 49</strong
+                        >
                       </p>
-                      
-                      <p>Также оформить заказ и проконсультироваться по услугам / продукции Вы можете:</p>
-                      
+
+                      <p>
+                        Также оформить заказ и проконсультироваться по услугам /
+                        продукции Вы можете:
+                      </p>
+
                       <ul class="services-list">
                         <li class="services-list__item">
-                          По телефону: <a href="tel:+79872156000">8 (987) 215 6000</a>
+                          По телефону:
+                          <a href="tel:+79872156000">8 (987) 215 6000</a>
                         </li>
                         <li class="services-list__item">
-                          Написать в <a href="https://api.whatsapp.com/send?phone=+79872156000&amp;text=Здравствуйте!%20Запрос%20с%20сайта%20ТехноИмпериум" 
-                          target="_blank" rel="noopener">WhatsApp</a>
+                          Написать в
+                          <a
+                            href="https://api.whatsapp.com/send?phone=+79872156000&amp;text=Здравствуйте!%20Запрос%20с%20сайта%20ТехноИмпериум"
+                            target="_blank"
+                            rel="noopener"
+                            >WhatsApp</a
+                          >
                         </li>
                         <li class="services-list__item">
-                          Написать на e-mail: <a href="mailto:secretarict@technoimperium.ru">secretarict@technoimperium.ru</a>
+                          Написать на e-mail:
+                          <a href="mailto:secretarict@technoimperium.ru"
+                            >secretarict@technoimperium.ru</a
+                          >
                         </li>
                       </ul>
-                      
+
                       <p class="note-highlight">
-                        <strong>Бесплатный выезд специалиста на объект для оценки работ.</strong>
+                        <strong
+                          >Бесплатный выезд специалиста на объект для оценки
+                          работ.</strong
+                        >
                       </p>
                     </div>
                   </div>
                 </div>
-
-                <!-- Секция 2: Доставка и оплата -->
                 <h4>Доставка и оплата</h4>
-
                 <div class="services-content__layout">
                   <div class="services-content__image">
                     <img
@@ -159,81 +173,107 @@
                       height="334"
                     />
                   </div>
-
                   <div class="services-content__text">
                     <div class="services-content__inner">
-                      <p>Наша доставка осуществляется ежедневно лично или транспортной компанией по договоренности.</p>
-                      
+                      <p>
+                        Наша доставка осуществляется ежедневно лично или
+                        транспортной компанией по договоренности.
+                      </p>
+
                       <div class="highlight-block">
-                        <p><strong>Доставка щитов до любой точки ЕврАзЭС – за наш счёт!</strong></p>
+                        <p>
+                          <strong
+                            >Доставка щитов до любой точки ЕврАзЭС – за наш
+                            счёт!</strong
+                          >
+                        </p>
                       </div>
-                      
-                      <p>После оформления заказа на сайте мы сформируем счёт на оплату и отправим Вам.</p>
-                      
+
+                      <p>
+                        После оформления заказа на сайте мы сформируем счёт на
+                        оплату и отправим Вам.
+                      </p>
+
                       <p>Также Вы можете оформить заказ:</p>
                       <ul class="services-list">
-                        <li class="services-list__item">По телефону <a href="tel:+79872156000">8 (987) 215 6000</a></li>
-                        <li class="services-list__item">Написав нам на почту <a href="mailto:secretarict@technoimperium.ru">secretarict@technoimperium.ru</a></li>
+                        <li class="services-list__item">
+                          По телефону
+                          <a href="tel:+79872156000">8 (987) 215 6000</a>
+                        </li>
+                        <li class="services-list__item">
+                          Написав нам на почту
+                          <a href="mailto:secretarict@technoimperium.ru"
+                            >secretarict@technoimperium.ru</a
+                          >
+                        </li>
                       </ul>
-                      
-                      <p>Доступны различные варианты оплаты. Для уточнения деталей ждём Вашего звонка.</p>
-                      
+
+                      <p>
+                        Доступны различные варианты оплаты. Для уточнения
+                        деталей ждём Вашего звонка.
+                      </p>
+
                       <div class="features-block">
                         <div class="features-item">
                           <span class="features-icon">✓</span>
-                          <span class="features-text">Работаем по договору</span>
+                          <span class="features-text"
+                            >Работаем по договору</span
+                          >
                         </div>
                         <div class="features-item">
                           <span class="features-icon">✓</span>
-                          <span class="features-text">Гарантия на работы и оборудование</span>
+                          <span class="features-text"
+                            >Гарантия на работы и оборудование</span
+                          >
                         </div>
                         <div class="features-item">
                           <span class="features-icon">✓</span>
-                          <span class="features-text">Прозрачное ценообразование</span>
+                          <span class="features-text"
+                            >Прозрачное ценообразование</span
+                          >
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <!-- Секция 3: Контакты -->
                 <h4>Контакты</h4>
 
                 <div class="contacts-section">
                   <div class="contacts-info">
                     <h5 class="contacts-title">Головной офис и производство</h5>
-                    
+
                     <div class="contact-details">
                       <div class="contact-item">
-                        <strong>Адрес:</strong><br>
+                        <strong>Адрес:</strong><br />
                         Россия, РТ, г. Казань, ул. Восход, д. 49
                       </div>
-                      
+
                       <div class="contact-item">
-                        <strong>Режим работы:</strong><br>
-                        Пн-Пт: с 9:00 до 18:00<br>
+                        <strong>Режим работы:</strong><br />
+                        Пн-Пт: с 9:00 до 18:00<br />
                         Без перерывов и выходных
                       </div>
-                      
+
                       <div class="contact-item">
-                        <strong>Телефон:</strong><br>
+                        <strong>Телефон:</strong><br />
                         <a href="tel:+79872156000">8 (987) 215 6000</a>
                       </div>
-                      
+
                       <div class="contact-item">
-                        <strong>E-mail:</strong><br>
-                        <a href="mailto:secretariat@technoimperium.ru">secretariat@technoimperium.ru</a>
+                        <strong>E-mail:</strong><br />
+                        <a href="mailto:secretariat@technoimperium.ru"
+                          >secretariat@technoimperium.ru</a
+                        >
                       </div>
                     </div>
-                    
+
                     <div class="contacts-note">
                       <p>Большая парковка для автомобилей.</p>
                       <p>Бесплатный выезд специалиста на объект.</p>
                     </div>
                   </div>
-                  
+
                   <div class="contacts-map" id="contacts-map">
-                    <!-- Карта будет инициализирована через JavaScript -->
                     <div class="map-placeholder">
                       <div class="map-loading">
                         <div class="loading-spinner"></div>
@@ -242,112 +282,99 @@
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </main>
-
-      <!-- Подвал будет вставлен здесь автоматически -->
     </div>
-
-    <!-- Скрипты -->
-    <!-- Загрузчик компонентов -->
     <script src="js/components-loader.js"></script>
-
-    <!-- Основной скрипт страницы -->
     <script src="js/main.js" defer></script>
     <script src=""></script>
-
-    <!-- Скрипт для карты -->
     <script>
-// Скрипт для инициализации Яндекс карты
-(function() {
-    // Функция загрузки API Яндекс.Карт
-    function loadYandexMapAPI() {
-        const script = document.createElement('script');
-        script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
-        script.onload = initMap;
-        document.head.appendChild(script);
-    }
+      (function () {
+        function loadYandexMapAPI() {
+          const script = document.createElement("script");
+          script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+          script.onload = initMap;
+          document.head.appendChild(script);
+        }
 
-    // Функция инициализации карты
-    function initMap() {
-        ymaps.ready(function() {
-            // Создаем карту
-            var map = new ymaps.Map('contacts-map', {
-                center: [55.846401, 49.069439], // Координаты ул. Восход, 49, Казань
-                zoom: 15,
-                controls: ['zoomControl', 'fullscreenControl']
+        function initMap() {
+          ymaps.ready(function () {
+            var map = new ymaps.Map("contacts-map", {
+              center: [55.846401, 49.069439], // Координаты ул. Восход, 49, Казань
+              zoom: 15,
+              controls: ["zoomControl", "fullscreenControl"],
             });
 
-            // Создаем метку
-            var placemark = new ymaps.Placemark([55.846401, 49.069439], {
-                balloonContent: 'Группа компаний «ТехноИмпериум»<br>Россия, РТ, г. Казань, ул. Восход, д. 49',
-                hintContent: 'Группа компаний «ТехноИмпериум»'
-            }, {
-                preset: 'islands#icon',
-                iconColor: '#000000'
-            });
+            var placemark = new ymaps.Placemark(
+              [55.846401, 49.069439],
+              {
+                balloonContent:
+                  "Группа компаний «ТехноИмпериум»<br>Россия, РТ, г. Казань, ул. Восход, д. 49",
+                hintContent: "Группа компаний «ТехноИмпериум»",
+              },
+              {
+                preset: "islands#icon",
+                iconColor: "#000000",
+              }
+            );
 
-            // Добавляем метку на карту
             map.geoObjects.add(placemark);
 
             // Убираем placeholder после загрузки карты
-            const placeholder = document.querySelector('.map-placeholder');
+            const placeholder = document.querySelector(".map-placeholder");
             if (placeholder) {
-                placeholder.style.display = 'none';
+              placeholder.style.display = "none";
             }
-        });
-    }
+          });
+        }
 
-    // Загружаем API и инициализируем карту когда DOM готов
-    document.addEventListener('DOMContentLoaded', function() {
-        // Проверяем, есть ли контейнер для карты
-        if (document.getElementById('contacts-map')) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Проверяем, есть ли контейнер для карты
+          if (document.getElementById("contacts-map")) {
             // Загружаем API Яндекс.Карт
             loadYandexMapAPI();
-        }
-    });
-})();
+          }
+        });
+      })();
 
       // Функция инициализации всей страницы
       function initAboutPage() {
-        console.log('About page initialized');
-        
+        console.log("About page initialized");
+
         // Инициализация карты
         initYandexMap();
-        
+
         // Добавляем плавную прокрутку к якорям
         const sectionLinks = document.querySelectorAll('a[href^="#"]');
-        sectionLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#' || href.startsWith('#modal') || href.startsWith('#callback')) return;
-            
+        sectionLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (
+              href === "#" ||
+              href.startsWith("#modal") ||
+              href.startsWith("#callback")
+            )
+              return;
+
             const targetElement = document.querySelector(href);
             if (targetElement) {
               e.preventDefault();
               window.scrollTo({
                 top: targetElement.offsetTop - 100,
-                behavior: 'smooth'
+                behavior: "smooth",
               });
             }
           });
         });
       }
-
-      // Инициализация после загрузки DOM и компонентов
-      document.addEventListener('DOMContentLoaded', initAboutPage);
-      document.addEventListener('componentsLoaded', initAboutPage);
+      document.addEventListener("DOMContentLoaded", initAboutPage);
+      document.addEventListener("componentsLoaded", initAboutPage);
     </script>
-
-    <!-- Скрипт для инициализации загрузки компонентов -->
     <script>
-      // Инициализация загрузки компонентов
       document.addEventListener("DOMContentLoaded", function () {
-        // Создаем экземпляр загрузчика
         const loader = new ComponentsLoader();
 
         // Загружаем все компоненты

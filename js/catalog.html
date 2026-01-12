@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Каталог щитов автоматизации - ТехноИмпериум</title>
+    <meta
+      name="description"
+      content="Полный каталог щитов автоматизации для котельных, ИТП, насосов, КНС, вентиляции и других систем. Готовые решения и индивидуальные проекты."
+    />
+    <meta
+      name="keywords"
+      content="каталог щитов автоматизации, щиты для котельных, щиты ИТП, щиты КНС, щиты вентиляции, автоматизация"
+    />
+    <link rel="canonical" href="https://technoimperium.ru/catalog.html" />
+    <script src="js/seo-optimizer.js" defer></script>
+
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/catalog.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Каталог щитов автоматизации",
+        "description": "Широкий выбор щитов автоматизации для различных систем",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Щиты автоматизации котельных"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Щиты автоматизации ИТП"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Щиты автоматизации насосов"
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      .components-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .main-content {
+        display: none;
+      }
+      .components-loaded .main-content {
+        display: block;
+      }
+      .components-loaded .components-loading {
+        display: none;
+      }
+      .category-loading {
+        display: none;
+        text-align: center;
+        padding: 50px;
+        color: var(--color-dark-gray);
+      }
+      .category-loading--active {
+        display: block;
+      }
+      .category-content {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+      .category-content--loading {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+
+  <body class="page page--catalog">
+    <div class="components-loading">
+      <div class="loading-spinner"></div>
+      <p>Загрузка сайта...</p>
+    </div>
+
+    <div class="page__wrapper main-content">
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container container">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__current" id="current-category"
+                >Щиты автоматизации котельных</span
+              >
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <main class="main main--catalog">
+        <div class="catalog-page">
+          <div class="catalog-page__container container">
+            <div class="catalog-page__layout">
+              <aside class="catalog-sidebar">
+                <div class="catalog-sidebar__mobile-toggle hidden-lg-up">
+                  <button class="catalog-sidebar__toggle-btn">Каталог</button>
+                </div>
+
+                <div class="catalog-sidebar__content">
+                  <nav class="catalog-menu" aria-label="Категории товаров">
+                    <h2 class="catalog-menu__title visually-hidden">
+                      Категории щитов автоматизации
+                    </h2>
+                    <ul class="catalog-menu__list">
+                      <!-- Содержимое будет загружено через JS -->
+                    </ul>
+                  </nav>
+                </div>
+              </aside>
+
+              <div class="catalog-content">
+                <div class="category-loading" id="category-loading">
+                  <div class="loading-spinner"></div>
+                  <p>Загрузка контента...</p>
+                </div>
+
+                <div class="category-content" id="category-content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal" id="callback">
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <div class="modal__content">
+          <button class="modal__close" aria-label="Закрыть окно">×</button>
+          <div class="callback-form">
+            <h3 class="callback-form__title">Заказать обратный звонок</h3>
+            <p class="callback-form__description">
+              Введите номер телефона и мы Вам перезвоним в ближайшее время
+            </p>
+            <form class="callback-form__form">
+              <div class="callback-form__field">
+                <label class="callback-form__label"
+                  >Телефон<span>*</span></label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  class="callback-form__input"
+                  required
+                  placeholder="+7 (___) ___-__-__"
+                />
+              </div>
+              <button type="submit" class="callback-form__button button">
+                Жду звонка
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/components-loader.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/gallery-generator.js" defer></script>
+    <script src="js/catalog-dynamic.js" defer></script>
+    <script src="js/strapi-api.js" defer></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loader = new ComponentsLoader();
+        loader
+          .loadAllComponents()
+          .then(() => {
+            document.body.classList.add("components-loaded");
+            document.dispatchEvent(new CustomEvent("componentsLoaded"));
+          })
+          .catch((error) => {
+            console.error("Ошибка загрузки компонентов:", error);
+            document.body.classList.add("components-loaded");
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,348 +1,219 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-      Щит автоматика / управления, разработка, монтаж, наладка. КИПиА,
-      автоматизация котельных.
-    </title>
-    <meta
-      name="description"
-      content="Разработка, монтаж, наладка щитов автоматики и автоматизация котельных. КИПиА, сервис, гарантия."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Щиты автоматики - Разработка, монтаж, наладка, автоматизация котельных | ТехноИмпериум</title>
+  <meta name="description" content="Профессиональная разработка, монтаж и наладка щитов автоматики. Автоматизация котельных под ключ. Гарантия качества, работа по договору." />
+  <meta name="keywords" content="щиты автоматики, автоматизация котельных, монтаж щитов управления, КИПиА, разработка АСУ ТП" />
+  <script src="js/seo-optimizer.js" defer></script>
+  <link rel="canonical" href="https://technoimperium.ru/" />
+  
+  <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/style.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ТехноИмпериум",
+    "url": "https://technoimperium.ru",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://technoimperium.ru/search.html?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <style>
+    .components-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .main-content { display: none; }
+    .components-loaded .main-content { display: block; }
+    .components-loaded .components-loading { display: none; }
+  </style>
+</head>
 
-    <!-- Favicon -->
-    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
-
-    <!-- Основные стили -->
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- Стили для загрузчика компонентов -->
-    <style>
-      /* Стили для индикатора загрузки */
-      .components-loading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        text-align: center;
-      }
-
-      .loading-spinner {
-        width: 50px;
-        height: 50px;
-        border: 5px solid #f3f3f3;
-        border-top: 5px solid #3498db;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-bottom: 20px;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* Скрываем контент до загрузки компонентов */
-      .main-content {
-        display: none;
-      }
-
-      .components-loaded .main-content {
-        display: block;
-      }
-
-      /* Убираем индикатор загрузки после загрузки компонентов */
-      .components-loaded .components-loading {
-        display: none;
-      }
-    </style>
-  </head>
-
-  <body class="page">
-    <!-- Индикатор загрузки компонентов -->
-    <div class="components-loading">
-      <div class="loading-spinner"></div>
-      <p>Загрузка сайта...</p>
-    </div>
-
-    <!-- Основной контейнер для динамической загрузки компонентов -->
-    <div class="page__wrapper main-content">
-      <!-- Шапка будет вставлена здесь автоматически -->
-
-      <!-- Основной контент -->
-      <main class="main">
-        <!-- Баннеры -->
-        <section class="banners">
-          <div class="banners__container container">
-            <div class="banners__grid">
-              <!-- Баннер 1: Котельные -->
-              <div class="banners__item banners__item--small">
-                <a href="./catalog.html#kotelnye" class="banner">
-                  <div
-                    class="banner__image"
-                    style="background-image: url(./images/electro66.jpg)"
-                  ></div>
-                  <div class="banner__content">
-                    <h3 class="banner__title">Щиты автоматизации котельных</h3>
-                    <span class="banner__link">Подробнее</span>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Баннер 2: Восстановление -->
-              <div class="banners__item banners__item--large">
-                <a href="./catalog.html#vosstanovlenie" class="banner">
-                  <div
-                    class="banner__image"
-                    style="background-image: url(./images/sdv43.png)"
-                  ></div>
-                  <div class="banner__content">
-                    <h3 class="banner__title">
-                      Восстановление и ремонт щитов автоматизации
-                    </h3>
-                    <span class="banner__link">Подробнее</span>
-                  </div>
-                </a>
-              </div>
+<body class="page">
+  <div class="components-loading">
+    <div class="loading-spinner"></div>
+    <p>Загрузка сайта...</p>
+  </div>
+  
+  <div class="page__wrapper main-content">
+    <main class="main">
+      <section class="banners">
+        <div class="banners__container container">
+          <div class="banners__grid">
+            <div class="banners__item banners__item--small">
+              <a href="./catalog.html#kotelnye" class="banner">
+                <div class="banner__image" style="background-image: url(./images/electro66.jpg)"></div>
+                <div class="banner__content">
+                  <h2 class="banner__title">Щиты автоматизации котельных</h2>
+                  <span class="banner__link">Подробнее</span>
+                </div>
+              </a>
             </div>
-
-            <!-- Инфо текст -->
-            <div class="banners__info">
-              <p class="banners__info-text">Соблюдение сроков</p>
-              <p class="banners__info-text">По договору и с гарантией</p>
-            </div>
-
-            <div class="banners__grid">
-              <!-- Баннер 3: Автоматизация котельных -->
-              <div class="banners__item banners__item--large">
-                <a href="./catalog.html#kotelnye" class="banner">
-                  <div
-                    class="banner__image"
-                    style="background-image: url(./images/dfgeewr.jpg)"
-                  ></div>
-                  <div class="banner__content">
-                    <h3 class="banner__title">АВТОМАТИЗАЦИЯ КОТЕЛЬНЫХ</h3>
-                    <span class="banner__link">Подробнее</span>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Баннер 4: Разработка, монтаж -->
-              <div class="banners__item banners__item--small">
-                <a href="./catalog.html#kotelnye" class="banner">
-                  <div
-                    class="banner__image"
-                    style="background-image: url(./images/dfsadf.jpg)"
-                  ></div>
-                  <div class="banner__content">
-                    <h3 class="banner__title">
-                      РАЗРАБОТКА, МОНТАЖ, НАЛАДКА, СЕРВИС
-                    </h3>
-                    <span class="banner__link">Подробнее</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <!-- Инфо текст 2 -->
-            <div class="banners__info banners__info--center">
-              <p class="banners__info-text">Под любую задачу</p>
-            </div>
-
-            <div class="banners__grid banners__grid--three">
-              <!-- Баннер 5: ИТП -->
-              <div class="banners__item">
-                <a href="./catalog.html#itp" class="banner">
-                  <div
-                    class="banner__image"
-                    style="background-image: url(./images/2.jpg)"
-                  ></div>
-                  <div class="banner__content">
-                    <h3 class="banner__title">
-                      Щиты автоматизации / В сжатые сроки
-                    </h3>
-                    <span class="banner__link">Подробнее</span>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Баннер 6: Вентиляция -->
-              <div class="banners__item">
-                <a href="./catalog.html#ventilyatsiya" class="banner">
-                  <div
-                    class="banner__image"
-                    style="
-                      background-image: url(./images/Snimok-ekrana-2020-11-25-v-15.47.27.jpg);
-                    "
-                  ></div>
-                  <div class="banner__content">
-                    <h3 class="banner__title">Решаем задачи любой сложности</h3>
-                    <span class="banner__link">Подробнее</span>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Баннер 7: Комплекты щитов -->
-              <div class="banners__item">
-                <a href="./catalog.html#komplekty" class="banner">
-                  <div
-                    class="banner__image"
-                    style="background-image: url(./images/dsc_0779.jpg)"
-                  ></div>
-                  <div class="banner__content">
-                    <h3 class="banner__title">Готовые решения в наличии</h3>
-                    <span class="banner__link">Подробнее</span>
-                  </div>
-                </a>
-              </div>
+            
+            <div class="banners__item banners__item--large">
+              <a href="./catalog.html#vosstanovlenie" class="banner">
+                <div class="banner__image" style="background-image: url(./images/sdv43.png)"></div>
+                <div class="banner__content">
+                  <h2 class="banner__title">Восстановление и ремонт щитов автоматизации</h2>
+                  <span class="banner__link">Подробнее</span>
+                </div>
+              </a>
             </div>
           </div>
-        </section>
-
-        <!-- SEO блок -->
-        <section class="seo-block">
-          <div class="seo-block__container container">
-            <h1 class="seo-block__title">Группа компаний «ТехноИмпериум»</h1>
-            <div class="seo-block__content">
-              <p>
-                Группа компаний "ТехноИмпериум" основана в 2016 году. В состав
-                ГК входят:
-              </p>
-              <p>
-                ИП Кузнецов Олег Вячеславович – работы по проектированию,
-                монтажу, пусконаладке и техническому обслуживанию и эксплуатации
-                котельных любой мощности и на любом виде топлива с оборудованием
-                любых производителей. Производим работы по проектированию и
-                разработке, монтажу, пусконаладке и эксплуатации систем
-                автоматизации ИТП, приточно-вытяжных систем,
-                покрасочно-сушильных камер, КНС и КОС, овощехранилищ и теплиц,
-                насосных станций, АСУ ТП. Разработка/модернизация, монтаж и
-                отладка АСУ ТП.
-              </p>
-              <p>
-                ООО "Щит-Автоматика" – разработка и производство силовых щитов
-                (ВРУ, АВР, ЩР и т. д. и т. п.) и щитов автоматизации для
-                широкого спектра применения (котлы и котельные на любых видах
-                топлива, индивидуальные тепловые пункты (ИТП), приточно-вытяжные
-                системы, покрасочно-сушильные камеры, канализационно-насосные
-                станции (КНС) и канализационно-очистные станции (КОС),
-                овощехранилища и теплицы, насосы и насосные установки/станции,
-                грузоподъёмное оборудование (лебёдки, кран-балки и т. д. и т.
-                п.), производственные и перерабатывающие станки и установки, АСУ
-                ТП. Разработка/модернизация, монтаж, отладка и техническое
-                обслуживание систем автоматизации и АСУ ТП.
-              </p>
-              <p>
-                ООО "Монтаж-Автоматика" – монтажные, пусконаладочные и сервисные
-                работы с оформлением необходимой исполнительно-технической
-                документацией и сдачей в контролирующие органы. Котельные на
-                любых видах топлива. Системы отопления. Системы водоснабжения и
-                водоотведения (канализации). Системы вентиляции и
-                кондиционирования. Системы газоснабжения. Системы автоматизации.
-                Общестроительные работы.
-              </p>
+          
+          <div class="banners__info">
+            <p class="banners__info-text">Соблюдение сроков</p>
+            <p class="banners__info-text">По договору и с гарантией</p>
+          </div>
+          
+          <div class="banners__grid">
+            <div class="banners__item banners__item--large">
+              <a href="./catalog.html#kotelnye" class="banner">
+                <div class="banner__image" style="background-image: url(./images/dfgeewr.jpg)"></div>
+                <div class="banner__content">
+                  <h2 class="banner__title">АВТОМАТИЗАЦИЯ КОТЕЛЬНЫХ</h2>
+                  <span class="banner__link">Подробнее</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="banners__item banners__item--small">
+              <a href="./catalog.html#kotelnye" class="banner">
+                <div class="banner__image" style="background-image: url(./images/dfsadf.jpg)"></div>
+                <div class="banner__content">
+                  <h2 class="banner__title">РАЗРАБОТКА, МОНТАЖ, НАЛАДКА, СЕРВИС</h2>
+                  <span class="banner__link">Подробнее</span>
+                </div>
+              </a>
             </div>
           </div>
-        </section>
-
-        <!-- Контакты в подвале страницы -->
-        <section class="page-contacts">
-          <div class="page-contacts__container container">
-            <div class="page-contacts__content">
-              <p>
-                Наш адрес: Россия, РТ, г. Казань, ул. Восход д. 49. Большая
-                парковка для автомобилей.
-              </p>
-              <p>
-                Бесплатный выезд специалиста. Звоните сейчас
-                <a href="tel:+79872156000" class="page-contacts__phone"
-                  >8 (987) 215 6000</a
-                >
-              </p>
+          
+          <div class="banners__info banners__info--center">
+            <p class="banners__info-text">Под любую задачу</p>
+          </div>
+          
+          <div class="banners__grid banners__grid--three">
+            <div class="banners__item">
+              <a href="./catalog.html#itp" class="banner">
+                <div class="banner__image" style="background-image: url(./images/2.jpg)"></div>
+                <div class="banner__content">
+                  <h2 class="banner__title">Щиты автоматизации / В сжатые сроки</h2>
+                  <span class="banner__link">Подробнее</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="banners__item">
+              <a href="./catalog.html#ventilyatsiya" class="banner">
+                <div class="banner__image" style="background-image: url(./images/Snimok-ekrana-2020-11-25-v-15.47.27.jpg)"></div>
+                <div class="banner__content">
+                  <h2 class="banner__title">Решаем задачи любой сложности</h2>
+                  <span class="banner__link">Подробнее</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="banners__item">
+              <a href="./catalog.html#komplekty" class="banner">
+                <div class="banner__image" style="background-image: url(./images/dsc_0779.jpg)"></div>
+                <div class="banner__content">
+                  <h2 class="banner__title">Готовые решения в наличии</h2>
+                  <span class="banner__link">Подробнее</span>
+                </div>
+              </a>
             </div>
           </div>
-        </section>
-      </main>
-
-      <!-- Подвал будет вставлен здесь автоматически -->
-    </div>
-
-    <!-- Модальное окно обратного звонка -->
-    <div class="modal" id="callback">
-      <div class="modal__overlay"></div>
-      <div class="modal__container">
-        <div class="modal__content">
-          <button class="modal__close" aria-label="Закрыть окно">×</button>
-
-          <div class="callback-form">
-            <h3 class="callback-form__title">Заказать обратный звонок</h3>
-            <p class="callback-form__description">
-              Введите номер телефона и мы Вам перезвоним в ближайшее время
-            </p>
-
-            <form class="callback-form__form">
-              <div class="callback-form__field">
-                <label class="callback-form__label"
-                  >Телефон<span>*</span></label
-                >
-                <input
-                  type="tel"
-                  name="phone"
-                  class="callback-form__input"
-                  required
-                  placeholder="+7 (___) ___-__-__"
-                />
-              </div>
-
-              <button type="submit" class="callback-form__button button">
-                Жду звонка
-              </button>
-            </form>
+        </div>
+      </section>
+      
+      <section class="seo-block">
+        <div class="seo-block__container container">
+          <h1>Группа компаний «ТехноИмпериум» - Профессиональная автоматизация</h1>
+          <div class="seo-block__content">
+            <p>Группа компаний "ТехноИмпериум" основана в 2016 году. В состав ГК входят:</p>
+            <p>ИП Кузнецов Олег Вячеславович – работы по проектированию, монтажу, пусконаладке и техническому обслуживанию и эксплуатации котельных любой мощности и на любом виде топлива с оборудованием любых производителей. Производим работы по проектированию и разработке, монтажу, пусконаладке и эксплуатации систем автоматизации ИТП, приточно-вытяжных систем, покрасочно-сушильных камер, КНС и КОС, овощехранилищ и теплиц, насосных станций, АСУ ТП. Разработка/модернизация, монтаж и отладка АСУ ТП.</p>
+            <p>ООО "Щит-Автоматика" – разработка и производство силовых щитов (ВРУ, АВР, ЩР и т. д. и т. п.) и щитов автоматизации для широкого спектра применения (котлы и котельные на любых видах топлива, индивидуальные тепловые пункты (ИТП), приточно-вытяжные системы, покрасочно-сушильные камеры, канализационно-насосные станции (КНС) и канализационно-очистные станции (КОС), овощехранилища и теплицы, насосы и насосные установки/станции, грузоподъёмное оборудование (лебёдки, кран-балки и т. д. и т. п.), производственные и перерабатывающие станки и установки, АСУ ТП. Разработка/модернизация, монтаж, отладка и техническое обслуживание систем автоматизации и АСУ ТП.</p>
+            <p>ООО "Монтаж-Автоматика" – монтажные, пусконаладочные и сервисные работы с оформлением необходимой исполнительно-технической документацией и сдачей в контролирующие органы. Котельные на любых видах топлива. Системы отопления. Системы водоснабжения и водоотведения (канализации). Системы вентиляции и кондиционирования. Системы газоснабжения. Системы автоматизации. Общестроительные работы.</p>
           </div>
+        </div>
+      </section>
+      
+      <section class="page-contacts">
+        <div class="page-contacts__container container">
+          <div class="page-contacts__content">
+            <p>Наш адрес: Россия, РТ, г. Казань, ул. Восход д. 49. Большая парковка для автомобилей.</p>
+            <p>Бесплатный выезд специалиста. Звоните сейчас <a href="tel:+79872156000" class="page-contacts__phone">8 (987) 215 6000</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <div class="modal" id="callback">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+      <div class="modal__content">
+        <button class="modal__close" aria-label="Закрыть окно"></button>
+        <div class="callback-form">
+          <h3 class="callback-form__title">Заказать обратный звонок</h3>
+          <p class="callback-form__description">Введите номер телефона и мы Вам перезвоним в ближайшее время</p>
+          <form class="callback-form__form">
+            <div class="callback-form__field">
+              <label class="callback-form__label">Телефон<span>*</span></label>
+              <input type="tel" name="phone" class="callback-form__input" required placeholder="+7 (___) ___-__-__" />
+            </div>
+            <button type="submit" class="callback-form__button button">Жду звонка</button>
+          </form>
         </div>
       </div>
     </div>
-
-    <!-- Скрипты -->
-    <!-- Загрузчик компонентов (подключите этот скрипт первым) -->
-    <script src="js/components-loader.js"></script>
-
-    <!-- Основной скрипт страницы -->
-    <script src="js/main.js" defer></script>
-    <script src="js/gallery-generator.js" defer></script>
-
-    <!-- Скрипт для инициализации загрузки компонентов -->
-    <script>
-      // Инициализация загрузки компонентов
-      document.addEventListener("DOMContentLoaded", function () {
-        // Создаем экземпляр загрузчика
-        const loader = new ComponentsLoader();
-
-        // Загружаем все компоненты
-        loader
-          .loadAllComponents()
-          .then(() => {
-            // После загрузки всех компонентов показываем основной контент
-            document.body.classList.add("components-loaded");
-
-            // Создаем событие о завершении загрузки компонентов
-            const event = new CustomEvent("componentsLoaded");
-            document.dispatchEvent(event);
-          })
-          .catch((error) => {
-            console.error("Ошибка загрузки компонентов:", error);
-            // В случае ошибки все равно показываем контент
-            document.body.classList.add("components-loaded");
-          });
+  </div>
+  
+  <script src="js/components-loader.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery-generator.js" defer></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const loader = new ComponentsLoader();
+      loader.loadAllComponents().then(() => {
+        document.body.classList.add("components-loaded");
+        document.dispatchEvent(new CustomEvent("componentsLoaded"));
+      }).catch((error) => {
+        console.error("Ошибка загрузки компонентов:", error);
+        document.body.classList.add("components-loaded");
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>

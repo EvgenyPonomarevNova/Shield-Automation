@@ -1,142 +1,85 @@
-<!-- Footer Component -->
 <footer class="footer">
   <div class="footer__container container">
     <div class="footer__grid">
-      <!-- Колонка 1 -->
       <div class="footer__col">
         <div class="footer__section">
           <h3 class="footer__title">О нас</h3>
           <ul class="footer__list">
-            <li class="footer__item">
-              <a href="./about.html" class="footer__link">Как заказать</a>
-            </li>
-            <li class="footer__item">
-              <a href="./about.html" class="footer__link"
-                >Доставка и оплата</a
-              >
-            </li>
-            <li class="footer__item">
-              <a href="./about.html" class="footer__link">Контакты</a>
-            </li>
+            <li class="footer__item"><a href="./about.html" class="footer__link">Как заказать</a></li>
+            <li class="footer__item"><a href="./about.html" class="footer__link">Доставка и оплата</a></li>
+            <li class="footer__item"><a href="./about.html" class="footer__link">Контакты</a></li>
           </ul>
         </div>
       </div>
-
-      <!-- Колонка 2 -->
+      
       <div class="footer__col">
         <div class="footer__section">
           <ul class="footer__list">
-            <li class="footer__item">
-              <a href="./catalog.html" class="footer__link">Щиты автоматики. Каталог</a>
-            </li>
-            <li class="footer__item">
-              <a href="./portfolio.html" class="footer__link">Наши работы</a>
-            </li>
-            <li class="footer__item">
-              <a href="./documentation.html" class="footer__link"
-                >Документация</a
-              >
-            </li>
+            <li class="footer__item"><a href="./catalog.html" class="footer__link">Щиты автоматики. Каталог</a></li>
+            <li class="footer__item"><a href="./portfolio.html" class="footer__link">Наши работы</a></li>
+            <li class="footer__item"><a href="./documentation.html" class="footer__link">Документация</a></li>
           </ul>
         </div>
       </div>
-
-      <!-- Колонка 3 -->
+      
       <div class="footer__col">
         <div class="footer__section">
           <h3 class="footer__title">Наши направления</h3>
           <ul class="footer__list">
-            <li class="footer__item">
-              <a href="./avtomatizatsiya.html" class="footer__link"
-                >Автоматизация котельных. Разработка, монтаж, наладка, сервис</a
-              >
-            </li>
-            <li class="footer__item">
-              <a href="./AutomationShields.html" class="footer__link"
-                >Щиты автоматики. Разработка, монтаж, наладка, сервис</a
-              >
-            </li>
+            <li class="footer__item"><a href="./avtomatizatsiya.html" class="footer__link">Автоматизация котельных. Разработка, монтаж, наладка, сервис</a></li>
+            <li class="footer__item"><a href="./AutomationShields.html" class="footer__link">Щиты автоматики. Разработка, монтаж, наладка, сервис</a></li>
           </ul>
         </div>
       </div>
-
-      <!-- Центральная колонка -->
+      
       <div class="footer__col footer__col--center">
         <div class="footer__center">
-          <a href="/" class="footer__logo">
-            <img
-              src="./images/main-logo-min.png"
-              alt="ТехноИмпериум"
-              class="footer__logo-img"
-            />
+          <a href="/" class="footer__logo" aria-label="ТехноИмпериум - главная страница">
+            <img src="./images/main-logo-min.png" alt="ТехноИмпериум" class="footer__logo-img" width="180" height="54" />
           </a>
-          <button class="footer__callback button" data-modal="callback">
-            Обратный звонок
-          </button>
+          <button class="footer__callback button" data-modal="callback">Обратный звонок</button>
         </div>
       </div>
-
-      <!-- Колонка контактов -->
-      <div class="footer__col">
+      <button class="footer__callback button" data-modal="callback" id="footer__callback-mob">Обратный звонок</button>
+      <div class="footer__link-mob">
+        <a href="./about.html" class="footer__link">О нас</a>
+        <a href="./about.html" class="footer__link">Доставка и оплата</a>
+      </div>
+      <div class="footer__col" id="footer__col-mob">
         <div class="footer__section">
           <ul class="footer__contacts">
             <li class="footer__contact-item">
-              <p class="footer__contact-text">
-                Россия, РТ, г. Казань, ул. Восход 49
-              </p>
+              <p class="footer__contact-text">Россия, РТ, г. Казань, ул. Восход 49</p>
             </li>
             <li class="footer__contact-item">
-              <p class="footer__contact-text">
-                Режим работы: с 9:00 до 18:00
-              </p>
+              <p class="footer__contact-text">Режим работы: с 9:00 до 18:00</p>
             </li>
             <li class="footer__contact-item">
-              <a href="tel:+79872156000" class="footer__contact-link"
-                >8 (987) 215 6000</a
-              >
+              <a href="tel:+79872156000" class="footer__contact-link">8 (987) 215 6000</a>
             </li>
             <li class="footer__contact-item">
-              <a
-                href="mailto:secretariat@technoimperium.ru"
-                class="footer__contact-link"
-                >secretariat@technoimperium.ru</a
-              >
+              <a href="mailto:secretariat@technoimperium.ru" class="footer__contact-link">secretariat@technoimperium.ru</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Нижняя часть футера -->
+  
   <div class="footer__bottom">
     <div class="footer__social">
       <ul class="social">
         <li class="social__item">
-          <a
-            href="https://t.me/TechnoImperium"
-            target="_blank"
-            rel="noopener"
-            class="social__link"
-          >
-            Мы в TELEGRAM <span class="social__icon">→</span>
-          </a>
+          <a href="https://t.me/TechnoImperium" target="_blank" rel="noopener noreferrer" class="social__link">Мы в TELEGRAM <span class="social__icon">→</span></a>
         </li>
         <li class="social__item">
-          <a
-            href="https://vk.com/tehno_imperium"
-            target="_blank"
-            rel="noopener"
-            class="social__link"
-          >
-            Мы Вконтакте <span class="social__icon">→</span>
-          </a>
+          <a href="https://vk.com/tehno_imperium" target="_blank" rel="noopener noreferrer" class="social__link">Мы Вконтакте <span class="social__icon">→</span></a>
         </li>
       </ul>
     </div>
-
+    
     <div class="footer__copyright">
-      <p>«ТехноИмпериум» &copy; Казань 2020</p>
+      <p>«ТехноИмпериум» &copy; Казань 2020-2024</p>
     </div>
   </div>
 </footer>

@@ -12,6 +12,7 @@
       name="description"
       content="Автоматизация котельных. Монтаж, пусконаладка, сервисное и техническое обслуживание КИПиА теплогенерирующих объектов."
     />
+    <script src="js/seo-optimizer.js" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
@@ -284,329 +285,326 @@
 
     <!-- Скрипт для портфолио -->
     <script>
-      // Данные портфолио (31 карточка как в оригинале)
-      const portfolioItems = [
-        {
-          id: 1,
-          image: "./images/portfolio/5.jpg",
-          title:
-            "Техническое обслуживание КИПиА котельной с водогрейными котлами. РТ, г. Буинск.",
-        },
-        {
-          id: 2,
-          image: "./images/portfolio/4.jpg",
-          title:
-            "Техническое обслуживание КИПиА котельной с паровыми котлами. РТ, г. Буинск.",
-        },
-        {
-          id: 3,
-          image: "./images/portfolio/6.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА, электромонтаж в котельной суммарной мощностью 1,5 МВт. Техническое обслуживание КИПиА. РТ, г. Казань.",
-        },
-        {
-          id: 4,
-          image: "./images/portfolio/8.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной суммарной мощностью 2 МВт на природном газе. Техническое обслуживание КИПиА. РТ, г. Зеленодольск.",
-        },
-        {
-          id: 5,
-          image: "./images/portfolio/9.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА крышной котельной суммарной мощностью 0,2 МВт на природном газе. РТ, г. Казань, Оренбургский тракт.",
-        },
-        {
-          id: 6,
-          image: "./images/portfolio/10.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной суммарной мощностью 0,25 МВт на природном газе. Техническое обслуживание КИПиА. РТ, г. Лаишево.",
-        },
-        {
-          id: 7,
-          image: "./images/portfolio/12.jpg",
-          title:
-            "Пусконаладочные работы котельной мощностью 7,5 МВт. РТ, г. Набережные Челны, Промзона, Индустриальный парк 'КИП-Мастер'.",
-        },
-        {
-          id: 8,
-          image: "./images/portfolio/13.jpg",
-          title:
-            "Техническое обслуживание КИПиА. Котельная мощностью 1 МВт. РТ, г. Казань.",
-        },
-        {
-          id: 9,
-          image: "./images/portfolio/14.jpg",
-          title:
-            "Пусконаладка крышной котельной суммарной мощностью 2,2 МВт на природном газе. РТ, г. Казань, Оренбургский тракт.",
-        },
-        {
-          id: 10,
-          image: "./images/portfolio/16.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной суммарной мощностью 1,2 МВт на природном газе. Техническое обслуживание КИПиА. РТ, г. Зеленодольск.",
-        },
-        {
-          id: 11,
-          image: "./images/portfolio/17.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной суммарной мощностью 355 кВт на природном газе. РТ, Лаишевский район, сп Усады.",
-        },
-        {
-          id: 12,
-          image: "./images/portfolio/18.jpg",
-          title:
-            "Техническое обслуживание КИПиА котельной с водогрейным котлом мощностью 154 кВт. РТ, г. Казань.",
-        },
-        {
-          id: 13,
-          image: "./images/portfolio/19.jpg",
-          title:
-            "Техническое обслуживание КИПиА котельной с водогрейными котлами мощностью 300 кВт. РТ, г. Казань.",
-        },
-        {
-          id: 14,
-          image: "./images/portfolio/22.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной суммарной мощностью 2,4 МВт на природном газе. РТ, г. Казань.",
-        },
-        {
-          id: 15,
-          image: "./images/portfolio/23.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной суммарной мощностью 0,5 МВт на природном газе. Техническое обслуживание КИПиА. РТ, Лаишевский район, сп Пелёво.",
-        },
-        {
-          id: 16,
-          image: "./images/portfolio/24.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной суммарной мощностью 0,4 МВт на природном газе. РТ, Лаишевский район, сп Петровское.",
-        },
-        {
-          id: 17,
-          image: "./images/portfolio/25.jpg",
-          title:
-            "Техническое обслуживание КИПиА котельной мощностью 200 кВт. РТ, г. Казань.",
-        },
-        {
-          id: 18,
-          image: "./images/portfolio/26.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной суммарной мощностью 0,4 МВт на природном газе. РТ, Лаишевский район, сп Петровское.",
-        },
-        {
-          id: 19,
-          image: "./images/portfolio/28.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА крышной котельной суммарной мощностью 2 МВт на природном газе. РТ, г. Казань.",
-        },
-        {
-          id: 20,
-          image: "./images/portfolio/29.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной, 0,2 МВт. РТ, Рыбнослободской район, сп Рыбная Слобода.",
-        },
-        {
-          id: 21,
-          image: "./images/portfolio/30.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА котельной суммарной мощностью 0,2 МВт на природном газе. РТ, Пестречинский район, сп Кулаево.",
-        },
-        {
-          id: 22,
-          image: "./images/portfolio/31.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА водогрейной котельной, 3 МВт. РТ, г. Альметьевск.",
-        },
-        {
-          id: 23,
-          image: "./images/portfolio/32.jpg",
-          title:
-            "Пусконаладочные работы в отопительно-производственной котельной с водогрейными и паровыми котлами, мощность на отопление – 2 МВт, на производство – 2 т/ч. РТ, г. Буинск.",
-        },
-        {
-          id: 24,
-          image: "./images/portfolio/33.jpg",
-          title: "Монтаж и пусконаладка КИПиА котельной. РТ, г. Казань.",
-        },
-        {
-          id: 25,
-          image: "./images/portfolio/34.jpg",
-          title:
-            "Монтаж и пусконаладка КИПиА крышной котельной суммарной мощностью 0,6 МВт. Техническое обслуживание КИПиА. РТ, Лаишевский район, сп Боровое Матюшино.",
-        },
-        {
-          id: 26,
-          image: "./images/portfolio/36.jpg",
-          title:
-            "Автоматизация частной котельной по индивидуальному проекту. РТ, Лаишевский район, сп Тарлаши.",
-        },
-        {
-          id: 27,
-          image: "./images/portfolio/37.jpg",
-          title: "Монтаж и пусконаладка КИПиА котельной. РТ, г. Казань.",
-        },
-        {
-          id: 28,
-          image: "./images/portfolio/39.jpg",
-          title:
-            "Техническое обслуживание КИПиА отопительно-производственной котельной с котлами ДКВР. РТ, г. Казань.",
-        },
-        {
-          id: 29,
-          image: "./images/portfolio/41.jpg",
-          title:
-            "Монтаж и наладка КИПиА отопительной водогрейной котельной, 0,5 МВт. РТ, Лаишевский район, сп Ильинка.",
-        },
-        {
-          id: 30,
-          image: "./images/portfolio/42.jpg",
-          title:
-            "Монтажные и пусконаладочные работы КИПиА котельной мощностью 600 кВт с водогрейными котлами Viessmann. РТ, г. Казань.",
-        },
-        {
-          id: 31,
-          image: "./images/portfolio/43.jpg",
-          title:
-            "Монтаж и наладка КИПиА. Котельная, 200 кВт, водогрейные котлы Protherm. РТ, г. Набережные Челны.",
-        },
-      ];
+      // Данные портфолио (берём из Strapi, без сортировки, все подряд)
+      let portfolioItems = [];
 
-      // Конфигурация
-      const portfolioConfig = {
-        itemsPerLoad: 3,
-        initialVisible: 6,
-        itemsPerRow: 3,
-      };
+      // Чтобы не грузить дважды при DOMContentLoaded + componentsLoaded
+      let __portfolioLoaded = false;
+      let __portfolioLoading = null;
 
-      // Функция создания карточки портфолио с одинаковой высотой
-      function createPortfolioItem(item) {
-        return `
-        <div class="col-lg-4 col-md-12 col-sm-4 col-12">
-            <a href="${item.image}" class="portfolio-item" data-lightbox="portfolio" data-title="${item.title}">
-                <div class="portfolio-item__image">
-                    <img src="${item.image}" alt="${item.title}" class="portfolio-item__img img-responsive">
-                </div>
-                <div class="portfolio-item__title">
-                    <div class="portfolio-item__title-inner">${item.title}</div>
-                </div>
-            </a>
-        </div>
-    `;
+      async function loadPortfolioItemsFromStrapi() {
+        const STRAPI_BASE = "https://admin.shield-and-automation.ru";
+        const url = `${STRAPI_BASE}/api/works?populate=photos&pagination[pageSize]=500`;
+
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Strapi works fetch failed: ${res.status}`);
+
+        const json = await res.json();
+        const data = json?.data || [];
+
+        // Превращаем works в формат, который ждёт текущая верстка карточек
+        portfolioItems = data
+          .map((w, idx) => {
+            const title = w?.attributes?.title || "";
+            const photos = w?.attributes?.photos?.data || [];
+            const images = photos
+              .map((p) => {
+                const url = p?.attributes?.url;
+                if (!url) return null;
+                return url.startsWith("http") ? url : STRAPI_BASE + url;
+              })
+              .filter(Boolean);
+
+            if (images.length === 0) return null;
+
+            return { id: w.id, _index: idx, image: images[0], images, title };
+          })
+          .filter(Boolean);
+
+        // Делаем доступным полный список работ для модалки (включая скрытые)
+        window.__allWorks = portfolioItems;
       }
 
-      // Функция инициализации портфолио
-      function initPortfolio() {
-        const portfolioGrid = document.getElementById("portfolio-grid");
-        const loadMoreBtn = document.getElementById("load-more");
+      async function ensurePortfolioLoaded() {
+        if (__portfolioLoaded) return;
+        if (__portfolioLoading) return __portfolioLoading;
 
-        if (!portfolioGrid) return;
+        __portfolioLoading = (async () => {
+          try {
+            await loadPortfolioItemsFromStrapi();
+          } catch (e) {
+            console.error("Не удалось загрузить портфолио из Strapi:", e);
+            portfolioItems = [];
+          } finally {
+            __portfolioLoaded = true;
+          }
+        })();
 
-        let visibleCount = portfolioConfig.initialVisible;
+        return __portfolioLoading;
+      }
 
-        // Рендерим начальные элементы
+  // Конфигурация
+  const portfolioConfig = {
+    itemsPerLoad: 3,
+    initialVisible: 6,
+    itemsPerRow: 3,
+  };
+
+  // Функция создания карточки портфолио с одинаковой высотой
+  function createPortfolioItem(item) {
+    const images = (item.images && item.images.length) ? item.images : [item.image];
+    return `
+    <div class="col-lg-4 col-md-12 col-sm-4 col-12">
+        <a href="${item.image}" class="portfolio-item" data-title="${item.title}" data-images="${images.join('|')}" data-work-index="${item._index}">
+            <div class="portfolio-item__image">
+                <img src="${item.image}" alt="${item.title}" class="portfolio-item__img img-responsive">
+            </div>
+            <div class="portfolio-item__title">
+                <div class="portfolio-item__title-inner">${item.title}</div>
+            </div>
+        </a>
+    </div>
+`;
+  }
+
+  // Функция для привязки обработчиков к элементам портфолио (Лайтбокс)
+  function attachLightboxListeners() {
+    const portfolioItemsEls = document.querySelectorAll(".portfolio-item");
+
+    portfolioItemsEls.forEach((itemEl) => {
+      if (itemEl.hasAttribute("data-lightbox-bound")) return;
+      itemEl.setAttribute("data-lightbox-bound", "true");
+
+      itemEl.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Берём ВСЕ работы из Strapi (не зависит от "Показать ещё")
+        const allWorks = (window.__allWorks && Array.isArray(window.__allWorks) && window.__allWorks.length)
+          ? window.__allWorks
+          : [];
+
+        const clickedIndexAttr = this.getAttribute("data-work-index");
+        let workIndex = Number.isFinite(Number(clickedIndexAttr)) ? Number(clickedIndexAttr) : -1;
+
+        // Фолбэк: попробуем найти работу по заголовку/картинке
+        if (workIndex < 0 || workIndex >= allWorks.length) {
+          const clickedTitle = this.getAttribute("data-title") || this.querySelector(".portfolio-item__title-inner")?.textContent || "";
+          const clickedHref = this.getAttribute("href") || "";
+          workIndex = allWorks.findIndex(w =>
+            (w?.title || "") === clickedTitle && (w?.image || "") === clickedHref
+          );
+        }
+
+        // Если всё равно не нашли — просто используем текущие data-images из DOM
+        const fallbackTitle = this.getAttribute("data-title") || this.querySelector(".portfolio-item__title-inner")?.textContent || "";
+        const fallbackImagesAttr = this.getAttribute("data-images");
+        const fallbackHref = this.getAttribute("href");
+        const fallbackImages = fallbackImagesAttr ? fallbackImagesAttr.split("|").filter(Boolean) : (fallbackHref ? [fallbackHref] : []);
+
+        let images = fallbackImages;
+        let title = fallbackTitle;
+
+        if (workIndex >= 0 && workIndex < allWorks.length) {
+          const w = allWorks[workIndex];
+          title = w?.title || fallbackTitle;
+          images = (w?.images && w.images.length) ? w.images : fallbackImages;
+        }
+
+        let currentIndex = 0;
+
+        const lightbox = document.createElement("div");
+        lightbox.className = "lightbox";
+        lightbox.innerHTML = `
+          <div class="lightbox__overlay"></div>
+          <div class="lightbox__content">
+            <button class="lightbox__close" aria-label="Закрыть">&times;</button>
+
+            <div class="lightbox__work-nav">
+              <button class="lightbox__work-prev" type="button" aria-label="Предыдущая работа">← Предыдущая</button>
+              <div class="lightbox__work-counter"></div>
+              <button class="lightbox__work-next" type="button" aria-label="Следующая работа">Следующая →</button>
+            </div>
+
+            <button class="lightbox__prev" aria-label="Предыдущее фото">‹</button>
+            <img src="${images[0] || ""}" alt="${title}" class="lightbox__img">
+            <button class="lightbox__next" aria-label="Следующее фото">›</button>
+
+            <div class="lightbox__title"></div>
+            <div class="lightbox__counter"></div>
+          </div>
+        `;
+
+        document.body.appendChild(lightbox);
+        document.body.style.overflow = "hidden";
+
+        const imgEl = lightbox.querySelector(".lightbox__img");
+        const titleEl = lightbox.querySelector(".lightbox__title");
+        const counterEl = lightbox.querySelector(".lightbox__counter");
+        const prevBtn = lightbox.querySelector(".lightbox__prev");
+        const nextBtn = lightbox.querySelector(".lightbox__next");
+
+        const workPrevBtn = lightbox.querySelector(".lightbox__work-prev");
+        const workNextBtn = lightbox.querySelector(".lightbox__work-next");
+        const workCounterEl = lightbox.querySelector(".lightbox__work-counter");
+
+        const updatePhotoNav = () => {
+          const many = images.length > 1;
+          if (prevBtn) prevBtn.style.display = many ? "" : "none";
+          if (nextBtn) nextBtn.style.display = many ? "" : "none";
+          if (counterEl) counterEl.style.display = many ? "" : "none";
+          if (counterEl) counterEl.textContent = many ? `${currentIndex + 1} / ${images.length}` : "";
+        };
+
+        const updateWorkNav = () => {
+          if (!workCounterEl) return;
+          if (allWorks.length) {
+            workCounterEl.textContent = `Работа ${workIndex + 1} / ${allWorks.length}`;
+          } else {
+            workCounterEl.textContent = "";
+          }
+        };
+
+        const showImage = (index) => {
+          if (!images.length) return;
+          if (index < 0) index = images.length - 1;
+          if (index >= images.length) index = 0;
+          currentIndex = index;
+          if (imgEl) imgEl.src = images[currentIndex];
+          if (imgEl) imgEl.alt = title || "";
+          updatePhotoNav();
+        };
+
+        const showWork = (newWorkIndex) => {
+          if (!allWorks.length) return;
+          if (newWorkIndex < 0) newWorkIndex = allWorks.length - 1;
+          if (newWorkIndex >= allWorks.length) newWorkIndex = 0;
+          workIndex = newWorkIndex;
+
+          const w = allWorks[workIndex];
+          title = w?.title || "";
+          images = (w?.images && w.images.length) ? w.images : (w?.image ? [w.image] : []);
+          currentIndex = 0;
+
+          if (titleEl) titleEl.textContent = title;
+          updateWorkNav();
+          showImage(0);
+        };
+
+        // init
+        if (titleEl) titleEl.textContent = title;
+        updateWorkNav();
+        showImage(0);
+
+        if (prevBtn) prevBtn.addEventListener("click", (e) => { e.preventDefault(); showImage(currentIndex - 1); });
+        if (nextBtn) nextBtn.addEventListener("click", (e) => { e.preventDefault(); showImage(currentIndex + 1); });
+
+        if (workPrevBtn) workPrevBtn.addEventListener("click", (e) => { e.preventDefault(); showWork(workIndex - 1); });
+        if (workNextBtn) workNextBtn.addEventListener("click", (e) => { e.preventDefault(); showWork(workIndex + 1); });
+
+        const closeBtn = lightbox.querySelector(".lightbox__close");
+        const overlay = lightbox.querySelector(".lightbox__overlay");
+
+        const closeLightbox = () => {
+          if (lightbox && lightbox.parentNode) document.body.removeChild(lightbox);
+          document.body.style.overflow = "";
+        };
+
+        closeBtn.addEventListener("click", closeLightbox);
+        overlay.addEventListener("click", closeLightbox);
+
+        const escHandler = function (e) {
+          if (e.key === "Escape") {
+            closeLightbox();
+            document.removeEventListener("keydown", escHandler);
+          }
+          if (images.length > 1) {
+            if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+            if (e.key === "ArrowRight") showImage(currentIndex + 1);
+          }
+          if (allWorks.length) {
+            if (e.key === "PageUp") showWork(workIndex - 1);
+            if (e.key === "PageDown") showWork(workIndex + 1);
+          }
+        };
+
+        document.addEventListener("keydown", escHandler);
+      });
+    });
+  }
+
+  // Функция инициализации лайтбокса
+  function initLightbox() {
+    // Инициализация лайтбокса
+    attachLightboxListeners();
+  }
+
+  // Функция инициализации портфолио
+  async function initPortfolio() {
+    await ensurePortfolioLoaded();
+    const portfolioGrid = document.getElementById("portfolio-grid");
+    const loadMoreBtn = document.getElementById("load-more");
+
+    if (!portfolioGrid) return;
+
+    let visibleCount = portfolioConfig.initialVisible;
+
+    // Рендерим начальные элементы
+    renderPortfolioItems();
+
+    // Обработчик кнопки "Показать еще"
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", function () {
+        visibleCount += portfolioConfig.itemsPerLoad;
         renderPortfolioItems();
 
-        // Обработчик кнопки "Показать еще"
-        if (loadMoreBtn) {
-          loadMoreBtn.addEventListener("click", function () {
-            visibleCount += portfolioConfig.itemsPerLoad;
-            renderPortfolioItems();
-
-            // Скрываем кнопку если все элементы показаны
-            if (visibleCount >= portfolioItems.length) {
-              loadMoreBtn.style.display = "none";
-            }
-          });
+        // Скрываем кнопку если все элементы показаны
+        if (visibleCount >= portfolioItems.length) {
+          loadMoreBtn.style.display = "none";
         }
+      });
+    }
 
-        // Инициализация лайтбокса при клике на изображение
-        initLightbox();
+    // Инициализация лайтбокса
+    initLightbox();
 
-        function renderPortfolioItems() {
-          portfolioGrid.innerHTML = "";
+    function renderPortfolioItems() {
+      portfolioGrid.innerHTML = "";
 
-          // Создаем контейнер row
-          let html = '<div class="row">';
+      // Создаем контейнер row
+      let html = '<div class="row">';
 
-          for (
-            let i = 0;
-            i < Math.min(visibleCount, portfolioItems.length);
-            i++
-          ) {
-            html += createPortfolioItem(portfolioItems[i]);
+      for (
+        let i = 0;
+        i < Math.min(visibleCount, portfolioItems.length);
+        i++
+      ) {
+        html += createPortfolioItem(portfolioItems[i]);
 
-            // Закрываем и открываем новую строку каждые 3 элемента
-            if (
-              (i + 1) % portfolioConfig.itemsPerRow === 0 &&
-              i < visibleCount - 1
-            ) {
-              html += '</div><div class="row">';
-            }
-          }
-
-          html += "</div>";
-          portfolioGrid.innerHTML = html;
-
-          // Скрываем кнопку если все элементы показаны
-          if (visibleCount >= portfolioItems.length && loadMoreBtn) {
-            loadMoreBtn.style.display = "none";
-          }
+        // Закрываем и открываем новую строку каждые 3 элемента
+        if (
+          (i + 1) % portfolioConfig.itemsPerRow === 0 &&
+          i < visibleCount - 1
+        ) {
+          html += '</div><div class="row">';
         }
       }
 
-      // Функция инициализации лайтбокса
-      function initLightbox() {
-        // Простой лайтбокс на CSS/JS
-        const portfolioItems = document.querySelectorAll(".portfolio-item");
+      html += "</div>";
+      portfolioGrid.innerHTML = html;
 
-        portfolioItems.forEach((item) => {
-          item.addEventListener("click", function (e) {
-            e.preventDefault();
+      // Обновляем обработчики лайтбокса для ВСЕХ элементов
+      attachLightboxListeners();
 
-            const src = this.getAttribute("href");
-            const title = this.getAttribute("data-title");
-
-            // Создаем модальное окно для лайтбокса
-            const lightbox = document.createElement("div");
-            lightbox.className = "lightbox";
-            lightbox.innerHTML = `
-              <div class="lightbox__overlay"></div>
-              <div class="lightbox__content">
-                <button class="lightbox__close">&times;</button>
-                <img src="${src}" alt="${title}" class="lightbox__img">
-                <div class="lightbox__title">${title}</div>
-              </div>
-            `;
-
-            document.body.appendChild(lightbox);
-            document.body.style.overflow = "hidden";
-
-            // Закрытие лайтбокса
-            const closeBtn = lightbox.querySelector(".lightbox__close");
-            const overlay = lightbox.querySelector(".lightbox__overlay");
-
-            const closeLightbox = () => {
-              document.body.removeChild(lightbox);
-              document.body.style.overflow = "";
-            };
-
-            closeBtn.addEventListener("click", closeLightbox);
-            overlay.addEventListener("click", closeLightbox);
-
-            // Закрытие по ESC
-            document.addEventListener("keydown", function (e) {
-              if (e.key === "Escape") {
-                closeLightbox();
-              }
-            });
-          });
-        });
+      // Скрываем кнопку если все элементы показаны
+      if (visibleCount >= portfolioItems.length && loadMoreBtn) {
+        loadMoreBtn.style.display = "none";
       }
+    }
+  }
 
-      // Инициализация после загрузки DOM
-      document.addEventListener("DOMContentLoaded", initPortfolio);
-      document.addEventListener("componentsLoaded", initPortfolio);
+  // Инициализация после загрузки DOM
+  document.addEventListener("DOMContentLoaded", initPortfolio);
+  document.addEventListener("componentsLoaded", initPortfolio);
     </script>
 
     <!-- Скрипт для инициализации загрузки компонентов -->
