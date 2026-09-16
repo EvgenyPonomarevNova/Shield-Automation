@@ -1,172 +1,41 @@
-# ⚡ ТехноИмпериум | Современный сайт автоматизации
+# ТехноИмпериум — automation company website
 
-> 🏭 Профессиональные решения для автоматизации котельных, производства щитов управления и систем КИПиА
+Multi-page corporate website for industrial automation, control panels and boiler systems.
 
-[![Tech Stack](https://img.shields.io/badge/tech-HTML5%20|%20CSS3%20|%20JavaScript%20|%20ES6+-orange?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web)
-[![Responsive](https://img.shields.io/badge/responsive-100%25-green?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_mobile_first_websites)
-[![Performance](https://img.shields.io/badge/performance-optimized-red?style=flat-square)](https://developers.google.com/speed/pagespeed/insights/)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+[Open website preview](https://evgenyponomarevnova.github.io/Shield-Automation/)
 
-## 🎯 О проекте
+## About
 
-**ТехноИмпериум** — это современный корпоративный сайт для компании, специализирующейся на автоматизации котельных, производстве щитов управления и системах КИПиА. Проект реализован с использованием передовых веб-технологий и методологий.
+A corporate website with product and service pages, a project portfolio, documentation and a search interface.
 
-### 💡 Ключевые особенности
+## Status and scope
 
-- ⚡ **Сверхбыстрая загрузка** — оптимизированные ресурсы и ленивая загрузка
-- 📱 **100% адаптивность** — идеально работает на всех устройствах
-- 🎨 **Современный дизайн** — минимализм и футуристичные элементы
-- 🔍 **Интеллектуальный поиск** — умный поиск по всему контенту
-- 🖼️ **Динамические галереи** — интерактивные слайдеры и модальные окна
-- 📄 **SEO оптимизация** — максимальная видимость в поисковых системах
+This repository contains the static frontend. It does not include a production CMS or an operational deployment configuration.
 
-## 🚀 Технологии
+## Run locally
 
-### Frontend
-![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+Clone the repository and serve its root with a static HTTP server. For example, with Python installed:
 
-### Дополнительно
-- **ES6+** — современный стандарт JavaScript
-- **CSS Grid & Flexbox** — современные методы верстки
-- **CSS Variables** — кастомные CSS свойства
-- **Intersection Observer API** — оптимизация производительности
-- **Web APIs** — Fetch API, History API, Local Storage
+```sh
+git clone https://github.com/EvgenyPonomarevNova/Shield-Automation.git
+cd Shield-Automation
+python -m http.server 8080
+```
 
-## 📁 Структура проекта
-technoimperium/
-├── 📄 index.html              # Главная страница
-├── 📄 catalog.html            # Каталог продукции
-├── 📄 portfolio.html          # Портфолио работ
-├── 📄 about.html              # О компании
-├── 📄 documentation.html      # Документация
-├── 📄 search.html             # Страница поиска
-├── 📄 AutomationShields.html  # Щиты автоматики
-├── 📄 avtomatizatsiya.html    # Автоматизация котельных
-│
-├── 📁 css/                    # Стили
-│   ├── style.css             # Основные стили
-│   ├── search.css            # Стили поиска
-│   └── ...
-│
-├── 📁 js/                     # JavaScript модули
-│   ├── main.js               # Главный модуль
-│   ├── search-engine.js      # Поисковый движок
-│   ├── gallery-generator.js  # Галереи и слайдеры
-│   ├── portfolio-filter.js   # Фильтрация портфолио
-│   ├── catalog-dynamic.js    # Динамический каталог
-│   ├── documentation-viewer.js # Просмотр документов
-│   └── components-loader.js  # Загрузка компонентов
-│
-├── 📁 images/                 # Изображения и медиа
-│   ├── portfolio/            # Портфолио работ
-│   ├── documentation/        # Документы
-│   └── ...
-│
-└── 📁 components/             # Компоненты сайта
-├── header.html           # Шапка сайта
-└── footer.html           # Подвал сайта
+Open [localhost:8080](http://localhost:8080). A static server previews HTML/CSS/JavaScript; it does not execute PHP or connect external form services.
 
-## 🎨 Основные компоненты
+## Repository guide
 
-### 🔍 Интеллектуальный поиск
-- **Релевантность результатов** — алгоритм ранжирования по релевантности
-- **Подсветка совпадений** — визуальное выделение найденных фрагментов
-- **Категоризация результатов** — группировка по типам контента
-- **История поиска** — сохранение поисковых запросов
+- `AutomationShields.html`
+- `about.html`
+- `avtomatizatsiya.html`
+- `catalog.html`
+- `css`
+- `documentation.html`
+- `fonts`
+- `footer.html`
+- `header.html`
 
-### 🖼️ Динамические галереи
-- **Адаптивные слайдеры** — автоматическая подстройка под размер экрана
-- **Ленивая загрузка** — загрузка изображений по мере необходимости
-- **Модальное просмотр** — полноэкранный просмотр изображений
-- **Touch-навигация** — поддержка свайпов на мобильных
+## Author
 
-### 📱 Адаптивный дизайн
-- **Mobile-First** — разработка с учетом мобильных устройств
-- **Flexbox & Grid** — современные методы верстки
-- **Брейкпоинты** — оптимизация для всех размеров экранов
-- **Retina-дисплеи** — поддержка высокого разрешения
-
-## ⚡ Быстрый старт
-
-### Установка
-bash
-# Клонируйте репозиторий
-git clone https://github.com/your-username/technoimperium.git
-
-# Перейдите в директорию проекта
-cd technoimperium
-
-# Откройте index.html в браузере
-# Или используйте локальный сервер
-python -m http.server 8000
-# Для разработки используйте Live Server в VS Code
-# Или любой другой локальный сервер
-npx live-server
-
-## 🎯 Особенности реализации
-
-### ⚡ Производительность
-- ✅ **Минификация ресурсов** — оптимизированные CSS и JS
-- ✅ **Асинхронная загрузка** — компоненты загружаются параллельно
-- ✅ **Кэширование** — интеллектуальное кэширование контента
-- ✅ **Оптимизация изображений** — WebP формат и адаптивные размеры
-
-### ♿ Доступность
-- ✅ **WCAG 2.1** — соответствие стандартам доступности
-- ✅ **ARIA атрибуты** — семантическая разметка
-- ✅ **Клавиатурная навигация** — полное управление без мыши
-- ✅ **Screen Reader** — оптимизация для читалок
-
-### 🔍 SEO оптимизация
-- ✅ **Семантическая HTML5** — правильная структура документа
-- ✅ **Микроданные** — Schema.org разметка
-- ✅ **Мета-теги** — оптимизированные заголовки и описания
-- ✅ **Sitemap** — карта сайта для поисковиков
-
----
-
-## 🔧 Настройка
-
-### Конфигурация поиска
-Редактируйте `js/search-engine.js` для настройки поискового движка:
-
-javascript
-// Настройка релевантности
-const searchConfig = {
-  titleWeight: 10,
-  descriptionWeight: 5,
-  pathWeight: 3,
-  minQueryLength: 2
-};
-
-## 🤝 Участие в разработке
-
-Мы приветствуем вклад в развитие проекта!
-
-### Как внести вклад
-
-1. **Форкните репозиторий**
-2. **Создайте ветку** для вашей функции (`git checkout -b feature/amazing-feature`)
-3. **Зафиксируйте изменения** (`git commit -m 'Add some amazing feature'`)
-4. **Отправьте ветку** (`git push origin feature/amazing-feature`)
-5. **Откройте Pull Request**
-
-### Руководство по стилю
-
-- Используйте **ES6+** синтаксис для JavaScript
-- Следуйте **БЭМ** методологии для CSS
-- Поддерживайте **семантическую** разметку HTML
-- Добавляйте **комментарии** к сложным участкам кода
-
----
-
-## 📄 Лицензия
-
-Этот проект лицензирован под **MIT License** — подробности в файле [LICENSE](LICENSE).
-
-
----
-
-⭐ **Если этот проект был полезен для вас, пожалуйста, поставьте звезду на GitHub!**
+[Evgeny Ponomarev](https://github.com/EvgenyPonomarevNova/EvgenyPonomarevNova) · [Current products and selected work](https://github.com/EvgenyPonomarevNova/EvgenyPonomarevNova)
